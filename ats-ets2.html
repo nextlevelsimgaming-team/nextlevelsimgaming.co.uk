@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ATS and ETS2 graphics guides — ReShade, Project Next Gen and Snowy Moon | Next Level Sim Gaming</title>
+<meta name="description" content="Make American Truck Simulator and Euro Truck Simulator 2 look incredible — ReShade and Snowy Moon installed together, mod load order, config tweaks, and the two accessories that matter most.">
+<link rel="canonical" href="https://nextlevelsimgaming.co.uk/ats-ets2.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ATS and ETS2 graphics guides">
+<meta property="og:description" content="ReShade, Project Next Gen, Snowy Moon, load order and config — the full set, nothing held back.">
+<meta property="og:image" content="https://i.ytimg.com/vi/Yg67adDjAm8/maxresdefault.jpg">
+<meta property="og:url" content="https://nextlevelsimgaming.co.uk/ats-ets2.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@nextlevelsim">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#12151C;--ink-2:#1A1E27;--ink-3:#232833;
+  --amber:#F2A03D;--crimson:#D94A3D;
+  --paper:#E8EAEE;--paper-dim:#9BA3B2;--line:#2C3240;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ink);color:var(--paper);font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:17px;line-height:1.65}
+a{color:var(--amber)}
+.wrap{max-width:44rem;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:"Saira Condensed",sans-serif;font-weight:700;line-height:1.1;margin:0 0 .5rem}
+h1{font-size:clamp(2rem,7vw,3.1rem);margin-top:1.5rem}
+h2{font-size:clamp(1.5rem,4.5vw,2.1rem);margin-top:3rem;padding-top:1.25rem;border-top:1px solid var(--line)}
+h3{font-size:1.15rem;margin-top:1.75rem;color:var(--amber)}
+p{margin:0 0 1.1rem}
+ul,ol{padding-left:1.15rem}
+li{margin-bottom:.5rem}
+
+.bar{border-bottom:1px solid var(--line);background:var(--ink-2)}
+.bar .wrap{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;align-items:center;padding-top:.85rem;padding-bottom:.85rem}
+.brand{font-family:"Saira Condensed",sans-serif;font-weight:700;font-size:1.15rem;color:var(--paper);text-decoration:none}
+.bar nav{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:"IBM Plex Mono",monospace;font-size:.78rem}
+.bar nav a{color:var(--paper-dim);text-decoration:none}
+.bar nav a:hover,.bar nav a:focus{color:var(--amber)}
+.bar nav a[aria-current]{color:var(--amber)}
+
+.crumb{font-family:"IBM Plex Mono",monospace;font-size:.75rem;color:var(--paper-dim);margin:1.75rem 0 0}
+.crumb a{color:var(--paper-dim)}
+.standfirst{font-size:1.15rem;color:var(--paper-dim);margin-bottom:2rem}
+
+/* headline partner band */
+.partners{display:grid;grid-template-columns:1fr;gap:1rem;margin:0 0 2rem}
+@media(min-width:44rem){.partners{grid-template-columns:1fr 1fr}}
+.pcard{background:var(--ink-2);border:1px solid var(--line);border-left:3px solid var(--amber);border-radius:3px;padding:1.25rem;display:flex;flex-direction:column}
+.pcard .deal{font-family:"Saira Condensed",sans-serif;font-weight:700;font-size:1.9rem;line-height:1;color:var(--amber);margin:0 0 .15rem}
+.pcard h2{font-size:1.25rem;margin:0 0 .5rem;border:0;padding:0}
+.pcard p{font-size:.92rem;color:var(--paper-dim);margin:0 0 1.1rem;flex:1}
+.pcard .note{font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.03em;color:var(--paper-dim);margin:.6rem 0 0}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:"Saira Condensed",sans-serif;font-weight:700;font-size:1.05rem;padding:.65rem 1.25rem;border-radius:3px;text-decoration:none;border:0;cursor:pointer;background:var(--amber);color:var(--ink);align-self:flex-start}
+.btn:hover,.btn:focus{background:#ffb457}
+.btn.ghost{background:transparent;color:var(--amber);border:1px solid var(--amber);font-family:"IBM Plex Mono",monospace;font-size:.83rem;font-weight:500}
+.btn.ghost:hover,.btn.ghost:focus{background:rgba(242,160,61,.12)}
+:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+
+.videos{display:grid;grid-template-columns:1fr;gap:1.75rem;margin:1.5rem 0}
+@media(min-width:46rem){.videos{grid-template-columns:1fr 1fr}}
+.vid h3{margin:0 0 .4rem;font-size:1.02rem;color:var(--paper);font-family:"IBM Plex Sans",sans-serif;font-weight:600;line-height:1.35}
+.vid p{font-size:.89rem;color:var(--paper-dim);margin:.4rem 0 0}
+.frame{position:relative;padding-bottom:56.25%;height:0;background:var(--ink-2);border-radius:3px;overflow:hidden}
+.frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+.box{background:var(--ink-2);border:1px solid var(--line);border-radius:3px;padding:1.25rem 1.25rem .4rem;margin:1.5rem 0}
+.box h3{margin-top:0}
+.warn{border-left:3px solid var(--crimson)}
+code{font-family:"IBM Plex Mono",monospace;font-size:.88em;background:var(--ink-3);padding:.12em .35em;border-radius:2px}
+.aside{border-left:2px solid var(--line);padding-left:1rem;color:var(--paper-dim);font-size:.95rem;margin:1.5rem 0}
+
+table{width:100%;border-collapse:collapse;margin:1.25rem 0 1.5rem;font-size:.92rem}
+th,td{text-align:left;padding:.55rem .5rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:"IBM Plex Mono",monospace;font-weight:500;font-size:.74rem;color:var(--paper-dim);letter-spacing:.03em}
+td:first-child{color:var(--paper-dim);width:40%}
+
+.disclosure{font-size:.8rem;color:var(--paper-dim);margin:2rem 0 0;padding-top:1.25rem;border-top:1px solid var(--line)}
+footer{margin-top:3.5rem;padding:2rem 0;border-top:1px solid var(--line);background:var(--ink-2);font-size:.85rem;color:var(--paper-dim)}
+footer .wrap p{margin:0 0 .5rem}
+footer a{color:var(--paper-dim)}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <div class="wrap">
+    <a class="brand" href="/index.html">Next Level Sim Gaming</a>
+    <nav>
+      <a href="/index.html#videos">Latest</a>
+      <a href="/pimax.html">Pimax</a>
+      <a href="/ats-ets2.html" aria-current="page">ATS / ETS2</a>
+      <a href="/pimax-setup-and-fix-guide.html">Fix Guide</a>
+      <a href="/tobii.html">Tobii</a>
+      <a href="/codes.html">Discount codes</a>
+      <a href="https://discord.gg/gw6xXkWtKa">Discord</a>
+    </nav>
+  </div>
+</div>
+
+<main class="wrap">
+  <p class="crumb"><a href="/index.html">Home</a> / ATS and ETS2 graphics</p>
+
+  <h1>Making ATS and ETS2 look incredible</h1>
+  <p class="standfirst">ReShade, Project Next Gen and Snowy Moon running together, the load order that stops the crashes, and the settings other channels won't share. Everything below is what's actually installed on my machine.</p>
+
+  <div class="partners">
+    <div class="pcard">
+      <p class="deal">40% off</p>
+      <h2>Pizzter Modding</h2>
+      <p>Premium trucks like the Pizzter 389 — the interior and chrome detail these guides are built around. Follow the load order they supply when you install one.</p>
+      <a class="btn" href="https://pizzstermodding.com/nextlevelsimgaming" data-partner="pizzter" data-slot="ats-hero">Open Pizzter — 40% applied</a>
+      <p class="note">No code needed · applied through the link</p>
+    </div>
+    <div class="pcard">
+      <p class="deal">Tobii</p>
+      <h2>Eye Tracker 5</h2>
+      <p>Head look, eye-only gaze and head roll. The thing that makes a flat screen feel like a cab, and it's running in every guide below.</p>
+      <a class="btn" href="https://tobii.gg/nextlevelsimgaming" data-partner="tobii" data-slot="ats-hero">Open Tobii — discount applied</a>
+      <p class="note">Ambassador · no code needed</p>
+    </div>
+  </div>
+
+  <h2>The guides</h2>
+  <p>Four full walkthroughs. If you're starting from nothing, take the bottom one first — it covers the install from scratch. The others build on it with newer ReShades and game versions.</p>
+
+  <div class="videos">
+
+    <div class="vid">
+      <div class="frame">
+        <iframe src="https://www.youtube.com/embed/Yg67adDjAm8" title="ATS — Project Next Gen 2.0 and Simuverse ReShade" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <h3>ATS — Project Next Gen 2.0 and the Simuverse ReShade</h3>
+      <p>The 2.0 rain overhaul with road puddles finally fixed, the Jon Ruda W900 Highway Killer, and my own Snowy Moon lighting settings instead of the defaults.</p>
+    </div>
+
+    <div class="vid">
+      <div class="frame">
+        <iframe src="https://www.youtube.com/embed/k-l3FH9eZRw" title="ETS2 — Project Ultimate ReShade and weather" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <h3>ETS2 — Project Ultimate ReShade and weather</h3>
+      <p>With Angus May. Directional rain that behaves like real rain, a free sample ReShade, and the clean reinstall that fixes the "couldn't install effects" error.</p>
+    </div>
+
+    <div class="vid">
+      <div class="frame">
+        <iframe src="https://www.youtube.com/embed/1p0ISA2IsxQ" title="ATS 1.58 — Simuverse ReShade and Snowy Moon settings" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <h3>ATS — Simuverse ReShade and the chrome fix</h3>
+      <p>Why Snowy Moon dulls your chrome and the reflection and tone map settings that fix it, plus the infinite seat adjustment for a real truck view.</p>
+    </div>
+
+    <div class="vid">
+      <div class="frame">
+        <iframe src="https://www.youtube.com/embed/OPo2DKJJF3o" title="ATS — full ReShade and mods install guide" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <h3>ATS — the full install, start to finish</h3>
+      <p>Start here. Where mods come from, installing ReShade and Snowy Moon together, load order, and the config changes that stop the crashing.</p>
+    </div>
+
+  </div>
+
+  <h2>The two things people get wrong</h2>
+
+  <h3>ReShade has to be version 6.50</h3>
+  <p>Newer builds don't work with ATS or ETS2. The installer will warn you that your build is outdated — ignore it. If you've had ReShade installed before, uninstall it first and then delete every leftover in the game's <code>bin\\Win_x64</code> folder: the log files and the shaders folder. Those leftovers are the single most common cause of the error saying the effects couldn't be installed.</p>
+
+  <h3>ReShade and Snowy Moon both want the same file</h3>
+  <p>Both ship a <code>dxgi.dll</code>, and two of them can't live in the same folder. After installing ReShade, rename its <code>dxgi.dll</code> to <code>d3d11.dll</code> — a super extension that loads the same way. Then drop Snowy Moon's <code>dxgi.dll</code> and <code>dinput8.dll</code> in alongside it and both run happily together.</p>
+  <p>Check it worked in game: <code>Home</code> brings up ReShade, <code>End</code> brings up Snowy Moon. If both open with no red errors, you're set.</p>
+
+  <div class="box warn">
+    <h3>Snowy Moon doesn't work in VR</h3>
+    <p>The lighting improvements are flat screen only. The Snowy Moon temporal anti-aliasing application is the one that works in a headset, and it's free. Worth knowing before you subscribe.</p>
+  </div>
+
+  <h2>Load order</h2>
+  <p>The question I get asked most. There's more than one workable answer, but this ordering has never caused me a problem:</p>
+  <ol>
+    <li>Sound mods at the very top</li>
+    <li>Weather and graphics mods next — whichever sits higher takes precedence</li>
+    <li>Project Next Gen, with its own weather component removed if you're substituting another</li>
+    <li>Everything else: trucks, trailers, traffic, wheels</li>
+    <li>Skins at the very bottom</li>
+  </ol>
+  <p>Paid mods often ship their own required order — Pizzter and Jon Ruda both do — so follow theirs where it conflicts with the general rule. If things break, Steam's <em>verify integrity of installed files</em> and the <em>find best load order</em> option under the Workshop tab will usually sort it.</p>
+
+  <h2>Config settings worth changing</h2>
+  <p>In <code>Documents\\American Truck Simulator\\config.cfg</code> (or the ETS2 equivalent):</p>
+  <table>
+    <thead><tr><th>Setting</th><th>What to do</th></tr></thead>
+    <tbody>
+      <tr><td>Buffer page size</td><td>Usually around 40. Raise it — 60 to start, 80 on a high-end system.</td></tr>
+      <tr><td>g_traffic</td><td>Default 1.1 gives you empty roads. 1.3 to 1.4 is realistic; beyond that gets silly.</td></tr>
+      <tr><td>Reflection scale</td><td>1 to 5. I run 3 — this is what brings the chrome back after Snowy Moon dulls it.</td></tr>
+      <tr><td>Memory pool (launch options)</td><td>Set in Steam under properties. Assumes 32GB of RAM — halve it if you have 16GB.</td></tr>
+    </tbody>
+  </table>
+  <p>Worth doing in the Nvidia control panel too: power management to maximum performance, low latency mode to ultra, and shader cache size to 100GB or unlimited if your drive can take it.</p>
+
+  <div class="box">
+    <h3>Crashing after a game update?</h3>
+    <p>Before you go hunting through log files, delete the config file and let the game build a fresh one. It gets corrupted moving between versions more often than you'd think, and it's cost me an afternoon before.</p>
+  </div>
+
+  <h2>The view over the wheel</h2>
+  <p>The other thing people ask about constantly. That vantage point looking over the top of the steering wheel, as you'd have in a real cab, comes from the immersive camera view and infinite zoom mod on the Steam Workshop. It lets the seat travel past the limits the game normally allows.</p>
+  <p>Press <code>F4</code>, choose adjust seats, then use the FOV slider first and the seat position to refine it. Aim for the top of the wheel just in view with both mirrors clearly visible. Paired with head tracking, that's where the flat screen stops feeling like a flat screen.</p>
+
+  <div class="partners" style="margin-top:2rem">
+    <div class="pcard">
+      <p class="deal">40% off</p>
+      <h2>Pizzter Modding</h2>
+      <p>If the trucks in those videos are what you're after, this is where they come from.</p>
+      <a class="btn" href="https://pizzstermodding.com/nextlevelsimgaming" data-partner="pizzter" data-slot="ats-footer">Open Pizzter — 40% applied</a>
+    </div>
+    <div class="pcard">
+      <p class="deal">Tobii</p>
+      <h2>Eye Tracker 5</h2>
+      <p>Head look, gaze and roll. Full write-up on the <a href="/tobii.html">Tobii page</a>.</p>
+      <a class="btn" href="https://tobii.gg/nextlevelsimgaming" data-partner="tobii" data-slot="ats-footer">Open Tobii — discount applied</a>
+    </div>
+  </div>
+
+  <div class="aside"><p>Stuck on any of it? The <a href="https://discord.gg/gw6xXkWtKa">Discord</a> has an ATS and ETS2 channel where these get sorted out daily.</p></div>
+
+  <p class="disclosure">Affiliate disclosure: the Pizzter and Tobii links above are affiliate links and I earn a commission on purchases through them, at no extra cost to you — it's what funds these guides. Project Next Gen, Snowy Moon, Simuverse and Project Ultimate are paid mods I buy and recommend on their own merits, with no commercial relationship. Please don't ask me to share paid mods; the people making them deserve paying.</p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="https://www.youtube.com/@nextlevelsimgaming">YouTube</a> · <a href="https://x.com/nextlevelsim">X</a> · <a href="https://discord.gg/gw6xXkWtKa">Discord</a> · <a href="/codes.html">Discount codes</a></p>
+    <p>© 2026 Next Level Sim Gaming. Pimax Sim Racing Ambassador · Tobii Ambassador</p>
+  </div>
+</footer>
+
+<script>
+/* Outbound affiliate click tracking — see codes.html for notes. */
+(function () {
+  function send(partner, slot) {
+    var payload = { partner: partner, slot: slot || 'unspecified', page: location.pathname };
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'affiliate_click', payload);
+    } else if (Array.isArray(window.dataLayer)) {
+      payload.event = 'affiliate_click';
+      window.dataLayer.push(payload);
+    }
+  }
+  function partnerFrom(el) {
+    if (el.getAttribute('data-partner')) return el.getAttribute('data-partner');
+    var href = el.getAttribute('href') || '';
+    try { return new URL(href, location.origin).hostname.replace(/^www\./, ''); }
+    catch (e) { return 'unknown'; }
+  }
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('a[href]');
+    if (!el) return;
+    var href = el.getAttribute('href') || '';
+    if (!/^https?:/i.test(href)) return;
+    try { if (new URL(href).hostname === location.hostname) return; } catch (err) { return; }
+    send(partnerFrom(el), el.getAttribute('data-slot'));
+  });
+})();
+</script>
+</body>
+</html>

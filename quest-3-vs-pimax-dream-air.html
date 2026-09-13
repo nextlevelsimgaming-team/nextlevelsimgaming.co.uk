@@ -1,428 +1,373 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-GB">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Quest 3 vs Pimax Dream Air for iRacing VR — Next Level Sim Gaming</title>
-<meta name="description" content="Meta Quest 3 vs Pimax Dream Air for iRacing VR — a head-to-head comparison of field of view, resolution, comfort and value to help you decide whether to upgrade.">
-<meta property="og:title" content="Quest 3 vs Pimax Dream Air for iRacing VR — Next Level Sim Gaming">
-<meta property="og:description" content="A head-to-head comparison of the Meta Quest 3 and Pimax Dream Air for iRacing VR, covering field of view, resolution, comfort and value.">
+<title>Quest 3 vs Pimax Dream Air for iRacing VR — measured FOV, clarity and comfort | Next Level Sim Gaming</title>
+<meta name="description" content="Quest 3 vs Pimax Dream Air for iRacing: measured FOV with testHMD, compressed link vs lossless DisplayPort clarity, 170g vs 515g comfort, and whether the price gap is worth it.">
+<link rel="canonical" href="https://nextlevelsimgaming.co.uk/quest-3-vs-pimax-dream-air.html">
 <meta property="og:type" content="article">
+<meta property="og:title" content="Quest 3 vs Pimax Dream Air for iRacing VR">
+<meta property="og:description" content="Measured FOV, lossless vs compressed clarity, weight and the real price gap — tested in iRacing at St Petersburg and Suzuka.">
 <meta property="og:image" content="https://i.ytimg.com/vi/6Swb3d2gws4/maxresdefault.jpg">
 <meta property="og:url" content="https://nextlevelsimgaming.co.uk/quest-3-vs-pimax-dream-air.html">
-<meta property="og:site_name" content="Next Level Sim Gaming">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@nextlevelsim">
-<meta name="twitter:title" content="Quest 3 vs Pimax Dream Air for iRacing VR — Next Level Sim Gaming">
-<meta name="twitter:description" content="A head-to-head comparison of the Meta Quest 3 and Pimax Dream Air for iRacing VR, covering field of view, resolution, comfort and value.">
-<meta name="twitter:image" content="https://i.ytimg.com/vi/6Swb3d2gws4/maxresdefault.jpg">
-<link rel="canonical" href="https://nextlevelsimgaming.co.uk/quest-3-vs-pimax-dream-air.html">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0C10'/%3E%3Cpath d='M6 24 L16 7 L26 24 L20 24 L16 16 L12 24 Z' fill='%23F2A03D'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;500;600&family=Saira+Condensed:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-
-  :root{
-    --void:#0A0C10;
-    --surface:#12151C;
-    --raised:#1A1F29;
-    --raised-hi:#212734;
-    --edge:#2A303D;
-    --edge-hi:#3A4152;
-    --amber:#F2A03D;
-    --amber-dim:#B87A2E;
-    --crimson:#D94A3D;
-    --fog:#8B93A7;
-    --paper:#EDEFF3;
-    --paper-dim:#C7CCD8;
-  }
-  *,*::before,*::after{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  @media (prefers-reduced-motion: reduce){
-    html{scroll-behavior:auto;}
-    *,*::before,*::after{animation-duration:0.001ms !important;animation-iteration-count:1 !important;transition-duration:0.001ms !important;}
-  }
-  body{
-    margin:0;
-    background:var(--void);
-    color:var(--paper);
-    font-family:'Saira',system-ui,-apple-system,'Segoe UI',sans-serif;
-    font-size:16px;
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-  }
-  img{max-width:100%;display:block;}
-  a{color:inherit;}
-  .mono{font-family:'IBM Plex Mono',ui-monospace,'SFMono-Regular',monospace;}
-  .eyebrow{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:0.75rem;
-    letter-spacing:0.18em;
-    text-transform:uppercase;
-    color:var(--amber);
-    display:flex;
-    align-items:center;
-    gap:0.6em;
-    margin:0 0 0.9em;
-  }
-  .eyebrow::before{
-    content:"";
-    width:1.4em;
-    height:1px;
-    background:var(--amber);
-    display:inline-block;
-  }
-  h1,h2,h3{
-    font-family:'Saira Condensed',system-ui,sans-serif;
-    font-weight:800;
-    text-transform:uppercase;
-    letter-spacing:0.01em;
-    text-wrap:balance;
-    margin:0;
-    color:var(--paper);
-  }
-  .wrap{
-    max-width:1180px;
-    margin:0 auto;
-    padding:0 1.5rem;
-  }
-  .panel{
-    position:relative;
-    background:var(--raised);
-    border:1px solid var(--edge);
-  }
-  .panel::before,.panel::after{
-    content:"";
-    position:absolute;
-    width:14px;
-    height:14px;
-    pointer-events:none;
-  }
-  .panel::before{
-    top:-1px;left:-1px;
-    border-top:2px solid var(--amber);
-    border-left:2px solid var(--amber);
-  }
-  .panel::after{
-    bottom:-1px;right:-1px;
-    border-bottom:2px solid var(--amber);
-    border-right:2px solid var(--amber);
-  }
-  nav{
-    position:sticky;
-    top:0;
-    z-index:40;
-    background:rgba(10,12,16,0.86);
-    backdrop-filter:blur(10px);
-    -webkit-backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--edge);
-  }
-  nav .wrap{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:1.5rem;
-    height:64px;
-  }
-  .brand{
-    display:flex;
-    align-items:center;
-    gap:0.65rem;
-    text-decoration:none;
-    white-space:nowrap;
-  }
-  .brand-mark{
-    width:32px;height:32px;
-    border:1px solid var(--edge-hi);
-    display:flex;align-items:center;justify-content:center;
-    background:var(--surface);
-    flex:none;
-  }
-  .brand-mark svg{width:16px;height:16px;}
-  .brand-word{
-    font-family:'Saira Condensed',sans-serif;
-    font-weight:800;
-    font-size:1.05rem;
-    letter-spacing:0.03em;
-    text-transform:uppercase;
-    color:var(--paper);
-  }
-  .nav-links{
-    display:flex;
-    gap:2rem;
-    list-style:none;
-    margin:0;padding:0;
-  }
-  .nav-links a{
-    text-decoration:none;
-    font-size:0.85rem;
-    letter-spacing:0.06em;
-    text-transform:uppercase;
-    color:var(--paper-dim);
-    font-family:'IBM Plex Mono',monospace;
-    transition:color 0.15s ease;
-  }
-  .nav-links a:hover{color:var(--amber);}
-  .nav-right{display:flex;align-items:center;gap:1.25rem;}
-  @media (max-width:820px){ .nav-links{display:none;} }
-  .btn{
-    display:inline-flex;
-    align-items:center;
-    gap:0.55em;
-    padding:0.75em 1.4em;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:0.82rem;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    text-decoration:none;
-    border:1px solid transparent;
-    cursor:pointer;
-    white-space:nowrap;
-    transition:transform 0.15s ease, background 0.15s ease, border-color 0.15s ease, box-shadow .15s ease;
-  }
-  .btn svg{width:1.05em;height:1.05em;flex:none;}
-  .btn-primary{background:var(--amber);color:#1A1204;font-weight:500;}
-  .btn-primary:hover{background:#FFB25A;transform:translateY(-1px);}
-  .btn-ghost{background:transparent;border-color:var(--edge-hi);color:var(--paper);}
-  .btn-ghost:hover{border-color:var(--amber);color:var(--amber);transform:translateY(-1px);}
-  .btn-discord{background:transparent;border-color:#3B4A6B;color:var(--paper);}
-  .btn-discord:hover{border-color:#8AA0E8;box-shadow:0 0 0 1px #8AA0E8 inset;}
-  .btn-sm{padding:0.55em 1em;font-size:0.72rem;}
-  .breadcrumb{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:0.72rem;
-    letter-spacing:0.05em;
-    color:var(--fog);
-    padding:1.4rem 0 0;
-  }
-  .breadcrumb a{color:var(--fog);text-decoration:none;}
-  .breadcrumb a:hover{color:var(--amber);}
-  .guide-head{
-    padding:1.2rem 0 3rem;
-    background:
-      radial-gradient(ellipse 900px 420px at 82% -10%, rgba(242,160,61,0.14), transparent 60%),
-      linear-gradient(180deg, var(--void), var(--surface) 180%);
-    border-bottom:1px solid var(--edge);
-  }
-  .guide-tag{color:var(--amber);}
-  .guide-head h1{font-size:clamp(2rem,4.6vw,3.1rem);margin-bottom:0.9rem;max-width:22ch;}
-  .guide-meta{
-    display:flex;
-    gap:1.4rem;
-    flex-wrap:wrap;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:0.75rem;
-    color:var(--fog);
-    letter-spacing:0.04em;
-    margin-bottom:1.2rem;
-  }
-  .guide-dek{color:var(--paper-dim);max-width:62ch;font-size:1.08rem;margin:0;}
-  section{padding:3.4rem 0;}
-  .video-frame{position:relative;}
-  .video-frame .ratio{position:relative;width:100%;aspect-ratio:16/9;background:#000;}
-  .video-frame .ratio iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
-  .video-frame figcaption{
-    display:flex;justify-content:space-between;gap:1rem;
-    padding:0.9rem 1.1rem;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:0.75rem;color:var(--fog);letter-spacing:0.04em;
-    border-top:1px solid var(--edge);
-  }
-  .guide-body{max-width:72ch;}
-  .guide-body h2{font-size:clamp(1.4rem,2.6vw,1.8rem);margin:2.6rem 0 1rem;}
-  .guide-body h2:first-child{margin-top:0;}
-  .guide-body p{color:var(--paper-dim);margin:0 0 1.3rem;}
-  .takeaways{list-style:none;margin:0 0 1.3rem;padding:0;display:flex;flex-direction:column;gap:0.7rem;}
-  .takeaways li{display:flex;align-items:flex-start;gap:0.65rem;color:var(--paper-dim);font-size:0.98rem;line-height:1.5;}
-  .takeaways svg{flex:none;width:16px;height:16px;margin-top:0.28rem;color:var(--amber);}
-  .guide-cta{padding:2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;margin-top:1rem;}
-  .guide-cta h3{font-size:1.2rem;margin-bottom:0.4rem;}
-  .guide-cta p{color:var(--paper-dim);margin:0;max-width:44ch;}
-  .code-plate{
-    display:inline-flex;align-items:center;gap:0.9rem;
-    border:1px dashed var(--edge-hi);padding:0.7rem 1rem;width:fit-content;
-  }
-  .code-plate .k{font-family:'IBM Plex Mono',monospace;font-size:0.66rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--fog);}
-  .code-plate .v{font-family:'IBM Plex Mono',monospace;font-size:1rem;color:var(--amber);letter-spacing:0.04em;}
-  .related{margin-top:1.4rem;}
-  .related-links{display:flex;gap:0.8rem;flex-wrap:wrap;}
-  .related-links a{
-    font-family:'IBM Plex Mono',monospace;font-size:0.78rem;
-    padding:0.7em 1.1em;border:1px solid var(--edge-hi);
-    text-decoration:none;color:var(--paper-dim);
-  }
-  .related-links a:hover{border-color:var(--amber);color:var(--amber);}
-  footer{padding:3rem 0 2.4rem;border-top:1px solid var(--edge);}
-  .footer-grid{
-    display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:2rem;
-    padding-bottom:2rem;border-bottom:1px solid var(--edge);margin-bottom:1.4rem;
-  }
-  .footer-links{display:flex;gap:2.2rem;flex-wrap:wrap;}
-  .footer-links a{
-    font-family:'IBM Plex Mono',monospace;font-size:0.78rem;letter-spacing:0.06em;
-    text-transform:uppercase;text-decoration:none;color:var(--paper-dim);
-  }
-  .footer-links a:hover{color:var(--amber);}
-  .footer-fine{
-    font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--fog);
-    display:flex;justify-content:space-between;flex-wrap:wrap;gap:0.6rem;
-  }
-  ::selection{background:var(--amber);color:#1A1204;}
-
-</style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nextlevelsimgaming.co.uk/" },
-        { "@type": "ListItem", "position": 2, "name": "Quest 3 vs Pimax Dream Air for iRacing VR", "item": "https://nextlevelsimgaming.co.uk/quest-3-vs-pimax-dream-air.html" }
-      ]
-    },
-    {
-      "@type": "VideoObject",
-      "name": "iRacing VR: Should You Upgrade From a Quest 3 to the Pimax Dream Air?",
-      "description": "A head-to-head comparison of the Meta Quest 3 and Pimax Dream Air for iRacing VR, covering field of view, resolution, comfort and value.",
-      "thumbnailUrl": "https://i.ytimg.com/vi/6Swb3d2gws4/maxresdefault.jpg",
-      "uploadDate": "2026-08-15T14:00:39Z",
-      "duration": "PT15M8S",
-      "embedUrl": "https://www.youtube.com/embed/6Swb3d2gws4",
-      "publisher": { "@id": "https://nextlevelsimgaming.co.uk/#organization" },
-      "mainEntityOfPage": "https://nextlevelsimgaming.co.uk/quest-3-vs-pimax-dream-air.html"
-    }
-  ]
+:root{
+  --ink:#12151C;
+  --ink-2:#1A1E27;
+  --ink-3:#232833;
+  --amber:#F2A03D;
+  --crimson:#D94A3D;
+  --paper:#E8EAEE;
+  --paper-dim:#9BA3B2;
+  --line:#2C3240;
 }
-</script>
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--ink);color:var(--paper);
+  font-family:"IBM Plex Sans",system-ui,sans-serif;
+  font-size:17px;line-height:1.65;
+}
+a{color:var(--amber)}
+.wrap{max-width:44rem;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:"Saira Condensed",sans-serif;font-weight:700;line-height:1.1;letter-spacing:.01em;margin:0 0 .5rem}
+h1{font-size:clamp(2rem,7vw,3.1rem);margin-top:1.5rem}
+h2{font-size:clamp(1.5rem,4.5vw,2.1rem);margin-top:3rem;padding-top:1.25rem;border-top:1px solid var(--line)}
+h3{font-size:1.2rem;margin-top:1.75rem;color:var(--amber)}
+p{margin:0 0 1.1rem}
+
+/* nav */
+.bar{border-bottom:1px solid var(--line);background:var(--ink-2)}
+.bar .wrap{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;align-items:center;padding-top:.85rem;padding-bottom:.85rem}
+.brand{font-family:"Saira Condensed",sans-serif;font-weight:700;font-size:1.15rem;color:var(--paper);text-decoration:none}
+.bar nav{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:"IBM Plex Mono",monospace;font-size:.78rem}
+.bar nav a{color:var(--paper-dim);text-decoration:none}
+.bar nav a:hover,.bar nav a:focus{color:var(--amber)}
+
+.crumb{font-family:"IBM Plex Mono",monospace;font-size:.75rem;color:var(--paper-dim);margin:1.75rem 0 0}
+.crumb a{color:var(--paper-dim)}
+.standfirst{font-size:1.15rem;color:var(--paper-dim);margin-bottom:2rem}
+
+/* verdict */
+.verdict{background:var(--ink-2);border-left:3px solid var(--amber);padding:1.4rem 1.4rem .4rem;margin:0 0 1.75rem;border-radius:2px}
+.verdict h2{margin:0 0 .75rem;border:0;padding:0;font-size:1.55rem}
+.split{display:grid;grid-template-columns:1fr;gap:1rem;margin-bottom:1rem}
+@media(min-width:40rem){.split{grid-template-columns:1fr 1fr;gap:1.5rem}}
+.split h3{margin-top:0;font-size:1rem;font-family:"IBM Plex Mono",monospace;font-weight:500;letter-spacing:.04em}
+.split .no h3{color:var(--crimson)}
+.split ul{margin:0;padding-left:1.1rem}
+.split li{margin-bottom:.45rem;font-size:.96rem}
+
+/* cta */
+.cta{background:var(--ink-3);border:1px solid var(--line);border-radius:3px;padding:1.5rem;margin:2.25rem 0}
+.cta h3{margin:0 0 .5rem;color:var(--paper);font-family:"Saira Condensed",sans-serif;font-size:1.45rem}
+.cta p{font-size:.95rem;color:var(--paper-dim);margin-bottom:1.1rem}
+.btn-row{display:flex;flex-wrap:wrap;gap:.75rem;align-items:stretch}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  font-family:"Saira Condensed",sans-serif;font-weight:700;font-size:1.1rem;
+  padding:.7rem 1.4rem;border-radius:3px;text-decoration:none;border:0;cursor:pointer;
+  background:var(--amber);color:var(--ink);
+}
+.btn:hover,.btn:focus{background:#ffb457}
+.btn.ghost{background:transparent;color:var(--amber);border:1px solid var(--amber);font-family:"IBM Plex Mono",monospace;font-size:.85rem;font-weight:500}
+.btn.ghost:hover,.btn.ghost:focus{background:rgba(242,160,61,.12)}
+.btn .code{font-family:"IBM Plex Mono",monospace;letter-spacing:.03em}
+.copy-note{font-family:"IBM Plex Mono",monospace;font-size:.75rem;color:var(--paper-dim);margin:.8rem 0 0;min-height:1.2em}
+.copy-note.live{color:var(--amber)}
+:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+
+
+/* hero banner */
+.hero{
+  position:relative;
+  background:#0c0e13 url("/porsche-pimax-suzuka.png") center 40% / cover no-repeat;
+  border-bottom:1px solid var(--line);
+  margin-bottom:2rem;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(18,21,28,.72) 0%,rgba(18,21,28,.82) 55%,rgba(18,21,28,.96) 100%);
+}
+.hero .wrap{position:relative;z-index:1;padding-top:2.25rem;padding-bottom:2.5rem}
+.hero .crumb{margin-top:0}
+.hero h1{margin-top:.75rem;text-shadow:0 2px 18px rgba(0,0,0,.55)}
+.hero .standfirst{margin-bottom:0;color:#C6CCD8;max-width:34rem}
+@media(min-width:46rem){
+  .hero{background-position:center 45%}
+  .hero .wrap{padding-top:4rem;padding-bottom:4.5rem}
+  .hero::after{background:linear-gradient(100deg,rgba(18,21,28,.94) 0%,rgba(18,21,28,.78) 48%,rgba(18,21,28,.55) 100%)}
+}
+
+/* spec table */
+table{width:100%;border-collapse:collapse;margin:1.25rem 0 1.5rem;font-size:.92rem}
+th,td{text-align:left;padding:.6rem .5rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:"IBM Plex Mono",monospace;font-weight:500;font-size:.76rem;color:var(--paper-dim);letter-spacing:.03em}
+td:first-child{color:var(--paper-dim);width:34%}
+.num{font-family:"IBM Plex Mono",monospace}
+
+/* video */
+.video{position:relative;padding-bottom:56.25%;height:0;margin:1.5rem 0;background:var(--ink-2);border-radius:3px;overflow:hidden}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+.aside{border-left:2px solid var(--line);padding-left:1rem;color:var(--paper-dim);font-size:.95rem;margin:1.5rem 0}
+
+/* related */
+.related{margin:3rem 0 0;padding-top:1.25rem;border-top:1px solid var(--line)}
+.related ul{list-style:none;padding:0;margin:0}
+.related li{margin-bottom:.6rem}
+
+footer{margin-top:3.5rem;padding:2rem 0;border-top:1px solid var(--line);background:var(--ink-2);font-size:.85rem;color:var(--paper-dim)}
+footer .wrap p{margin:0 0 .5rem}
+footer a{color:var(--paper-dim)}
+.disclosure{font-size:.8rem;color:var(--paper-dim);font-style:normal;margin:1.5rem 0 0}
+</style>
 </head>
 <body>
 
-<nav>
+<div class="bar">
   <div class="wrap">
-    <a class="brand" href="index.html#top">
-      <span class="brand-mark">
-        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 24 L16 6 L28 24 L21 24 L16 15 L11 24 Z" fill="#F2A03D"/></svg>
-      </span>
-      <span class="brand-word">Next&nbsp;Level&nbsp;Sim&nbsp;Gaming</span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html#videos">Latest</a></li>
-      <li><a href="gallery.html#about">About</a></li>
-      <li><a href="index.html#pimax">Pimax</a></li>
-      <li><a href="pimax-setup-and-fix-guide.html">Fix Guide</a></li>
-      <li><a href="offer.html">Offer</a></li>
-      <li><a href="gallery.html#partners">Partners</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="index.html#discord">Discord</a></li>
-    </ul>
-    <div class="nav-right">
-      <a class="btn btn-primary btn-sm" href="https://www.youtube.com/@nextlevelsimgaming?sub_confirmation=1" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 8.5v7l6-3.5-6-3.5Z"/></svg>
-        Subscribe
-      </a>
-    </div>
+    <a class="brand" href="/index.html">Next Level Sim Gaming</a>
+    <nav>
+      <a href="/index.html#videos">Latest</a>
+      <a href="/pimax.html">Pimax</a>
+      <a href="/ats-ets2.html">ATS / ETS2</a>
+      <a href="/pimax-setup-and-fix-guide.html">Fix Guide</a>
+      <a href="/tobii.html">Tobii</a>
+      <a href="/codes.html">Discount codes</a>
+      <a href="https://discord.gg/gw6xXkWtKa">Discord</a>
+      <a href="https://www.youtube.com/@nextlevelsimgaming?sub_confirmation=1">Subscribe</a>
+    </nav>
   </div>
-</nav>
-
-<div class="wrap breadcrumb">
-  <a href="index.html">Home</a> / <span>Quest 3 vs Pimax Dream Air for iRacing VR</span>
 </div>
 
-<header class="guide-head">
+<header class="hero">
   <div class="wrap">
-    <p class="eyebrow"><span class="guide-tag">Headset comparison</span></p>
+    <p class="crumb"><a href="/index.html">Home</a> / Quest 3 vs Pimax Dream Air</p>
     <h1>Quest 3 vs Pimax Dream Air for iRacing VR</h1>
-    <div class="guide-meta mono">
-      <span>15 min 8 sec</span>
-      <span>Next Level Sim Gaming</span>
-    </div>
-    <p class="guide-dek">A direct comparison between the Meta Quest 3 and the Pimax Dream Air specifically for iRacing — field of view, resolution, comfort over a full race stint, and whether the price difference is actually worth it.</p>
+    <p class="standfirst">Both headsets driven back to back at St Petersburg and Suzuka, same cars, same settings — with the field of view actually measured rather than taken off a spec sheet.</p>
   </div>
 </header>
 
-<section>
-  <div class="wrap">
-    <figure class="panel video-frame">
-      <div class="ratio">
-        <iframe
-          src="https://www.youtube.com/embed/6Swb3d2gws4"
-          title="iRacing VR: Should You Upgrade From a Quest 3 to the Pimax Dream Air?"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
+<main class="wrap">
+  <div class="verdict">
+    <h2>The short answer</h2>
+    <p>The Dream Air is a genuine desktop-quality PC VR experience and the Quest 3 is an emulation of one. On a lossless DisplayPort connection the distant signage, braking markers and dash text that smear on the Quest 3 stay pin sharp, and at roughly 170g against 515g you can wear it for a full stint. It is also more than three times the price.</p>
+    <div class="split">
+      <div class="yes">
+        <h3>Upgrade if</h3>
+        <ul>
+          <li>You race seriously and read braking markers and apexes at distance</li>
+          <li>You still fall back to an ultrawide or triples because VR isn't sharp enough</li>
+          <li>You run long stints and the Quest 3's weight or battery ends your session</li>
+          <li>Your GPU can make use of eye-tracked foveated rendering</li>
+        </ul>
       </div>
-      <figcaption>
-        <span>NEXT_LEVEL_SIM_GAMING // GUIDE</span>
-        <a href="https://www.youtube.com/@nextlevelsimgaming/videos" target="_blank" rel="noopener" style="color:var(--amber);text-decoration:none;">Full channel →</a>
-      </figcaption>
-    </figure>
-
-    <div class="guide-body" style="margin-top:2.4rem;">
-      <h2>What this covers</h2>
-      <ul class="takeaways">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Field of view side by side, in the cockpit rather than on a spec sheet</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Resolution and clarity for reading track detail, mirrors and instruments in iRacing specifically</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Comfort over a realistic full-length stint, not just the first five minutes in the headset</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Whether the price jump from Quest 3 to Dream Air is worth it for sim racing specifically, versus general VR use</li>
-      </ul>
-
-      <h2>Why this comparison is iRacing-specific</h2>
-      <p>Headset comparisons that stay general — VR gaming, media, fitness apps — miss the things that actually matter for sim racing: how much of the track you can see without turning your head, whether you can read a mirror or a delta bar at a glance, and whether the headset is still comfortable an hour into a stint. This comparison is built around those specifically, using iRacing as the test bed.</p>
-      <h2>The honest trade-off</h2>
-      <p>Quest 3 and Dream Air sit at very different price points, and the video doesn't pretend that gap doesn't matter — it's a straight look at what you actually get for the difference, and who that difference is and isn't worth it for.</p>
-      <h2>Full comparison</h2>
-      <p>Field of view, resolution, comfort and the value question are all covered in detail in the video above.</p>
-
-
-      <div class="related">
-        <p class="eyebrow">Keep going</p>
-        <div class="related-links">
-          <a href="index.html#pimax">Pimax Sim Racing Ambassador discount</a>
-          <a href="iracing-dream-air-driver-setting.html">iRacing + Dream Air: the 90FPS driver setting</a>
-          <a href="gallery.html#partners">Comfort mod and lens discount codes</a>
-        </div>
+      <div class="no">
+        <h3>Don't upgrade if</h3>
+        <ul>
+          <li>You use the headset for standalone games and mixed reality as much as sim racing</li>
+          <li>You need passthrough — the Lighthouse version has none</li>
+          <li>You wear glasses in the headset and don't want prescription inserts</li>
+          <li>The price gap is money you'd rather put into a GPU or the rig itself</li>
+        </ul>
       </div>
-    </div>
-
-    <div class="panel guide-cta">
-      <div>
-        <h3>Considering the upgrade?</h3>
-        <p>Approved Pimax Sim Racing Ambassador — code NLSimgaming for a discount on Dream Air.</p>
-      </div>
-      <a class="btn btn-primary" href="https://pimax.com/products/pimax-dream-air/?ref=nlsimgaming" target="_blank" rel="noopener">Shop Pimax →</a>
     </div>
   </div>
-</section>
 
+  <div class="cta">
+    <h3>Ready to make the jump?</h3>
+    <p>Approved Pimax Sim Racing Ambassador. The discount is applied for you at checkout — no code to copy. <!-- PROMO: delete after 20 Sept 2026 -->Free shipping until 20 September 2026.<!-- END PROMO --></p>
+    <div class="btn-row">
+      <a class="btn" href="https://pimax.com/discount/nlsimgaming?redirect=%2Fproducts%2Fpimax-dream-air/?ref=nlsimgaming" data-partner="pimax" data-slot="cta-top">
+        Shop the Dream Air — discount applied
+      </a>
+      <button class="btn ghost" type="button" data-code="NLSIMGaming12" data-url="https://pimax.com/products/pimax-dream-air/?ref=nlsimgaming&amp;utm_source=nlsg&amp;utm_medium=guide&amp;utm_campaign=quest3-vs-dreamair&amp;utm_content=cta-top-iracing">
+        Or take 12 months of iRacing free
+      </button>
+    </div>
+    <p class="copy-note" role="status" aria-live="polite"></p>
+  </div>
+
+  <h2>Clarity: compressed link versus lossless DisplayPort</h2>
+  <p>The Quest 3 is a standalone headset whatever you plug into it. Running PC VR means compressing the video feed over USB or Wi-Fi, and that compression is where sim racing loses. At St Petersburg in the Ferrari 296 GT3 it holds a solid 90fps on max settings, but distant road signs and iRacing's dash text get smudged by encoding artefacts, the image has a washed-out cast, and micro stutters appear on both Wi-Fi 6E and the cable. Testing used the Virtual Desktop beta and an AMVR LC6L link cable with pass-through charging, which removes the USB-3 bandwidth and disconnect problems — so this is the Quest 3 at its best, not hobbled.</p>
+  <p>The Dream Air runs a native DisplayPort 1.4a connection, so the image arrives mathematically intact. Everything that was artefacting in the distance is sharp, and the Sony micro-OLED panels — the same ones in the Apple Vision Pro — give blacks and colour depth an LCD can't reach. No mura, no chromatic aberration, no screen door.</p>
+  <p>At Suzuka in the Porsche 911 GT3 the difference stops being cosmetic. On the Quest 3 apexes are hard to judge and braking markers often resolve only once it's too late to use them. The honest test is whether a headset can replace an ultrawide or triples: for the Quest 3 the answer is no, and for the Dream Air it's yes.</p>
+  <div class="aside"><p>Two things worth knowing before you buy: micro-OLED panels can glare, which turning brightness down slightly reduces, and there's a brown tinge at the peripheral edge of the lenses. Both are normal across micro-OLED headsets, and both stop registering after a few sessions.</p></div>
+
+  <h2>Field of view, measured</h2>
+  <p>Pimax state 110° horizontal and 90° vertical. Measured with testHMD on the stock facial interface, the Dream Air gave 98° horizontal and 86° vertical. Swapping to the <a href="/codes.html#studioform">StudioForm X1-P</a> brought it to 108° horizontal and 90° vertical — essentially the stated figures. The difference is lens distance, and in sim racing it's the vertical number that matters most.</p>
+  <table>
+    <thead><tr><th>Measurement</th><th>Horizontal</th><th>Vertical</th></tr></thead>
+    <tbody>
+      <tr><td>Pimax stated</td><td class="num">110°</td><td class="num">90°</td></tr>
+      <tr><td>Stock facial interface</td><td class="num">98°</td><td class="num">86°</td></tr>
+      <tr><td>StudioForm X1-P interface</td><td class="num">108°</td><td class="num">90°</td></tr>
+    </tbody>
+  </table>
+  <p>If you buy the headset, budget for an aftermarket interface as part of it. You are otherwise leaving roughly 10° horizontal on the table.</p>
+
+  <h2>Will my PC run that resolution?</h2>
+  <p>The Dream Air pushes 3840×3552 per eye, which sounds impossible until you account for Tobii eye tracking, included as standard and absent entirely from the Quest 3. Dynamic foveated rendering keeps full resolution exactly where you're looking and drops the workload in your peripheral vision. In practice it's worth roughly a GPU tier — enough headroom to raise settings rather than lower them.</p>
+  <p>Outside iRacing there's more available. The PrimaShock settings put together by elhydro in the Discord have users on 4080s holding 90fps in titles like Automobilista 2.</p>
+
+  <div class="video">
+    <iframe src="https://www.youtube.com/embed/6Swb3d2gws4" title="Quest 3 vs Pimax Dream Air for iRacing VR" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+  </div>
+
+  <h2>Comfort over a full stint</h2>
+  <p>The headline number is weight: roughly 170g against the Quest 3's 515g. That gap is the single biggest day-to-day difference, and there's no battery anxiety because the Dream Air runs from a mains adapter.</p>
+  <p>The stock facial interface has been uncomfortable for a lot of users, which Pimax have acknowledged — a revised interface shown at the Sim Racing Expo is shipping free to new and existing owners. In the meantime the options are the 3D-printed interface by Zeeflyboys, or the <a href="/codes.html#studioform">StudioForm X1-P</a>, which comes with silk fabric cushions in varying thickness plus PU leather. The Apple Vision Pro dual strap is the other easy win and makes more difference than its price suggests.</p>
+
+  <h3>If you wear glasses</h3>
+  <p>You can't wear them in the Dream Air — the lenses sit too close. Prescription inserts are the answer, as they are on the Quest 3. The magnetic set from <a href="/codes.html#honsvr">HONS VR</a>, an approved Pimax partner, come with a carry case and are the ones used here.</p>
+
+  <h2>Tracking and passthrough</h2>
+  <p>You don't have to go back to lighthouses. The Dream Air supports SteamVR Lighthouse tracking if you want it, but there's also a SLAM inside-out option, so the plug-and-play convenience carries over.</p>
+  <p>Passthrough is the real culture shock coming from a Quest 3. The Lighthouse version has none at all; the SLAM version has basic black and white, fine for glancing at your surroundings and nothing more. That's normal for direct DisplayPort PC VR headsets — they aren't mixed reality devices. And no, you can't play Gorilla Tag.</p>
+
+  <h2>The price gap</h2>
+  <p>The Quest 3 has risen significantly and sits around £529 for the 512GB model in the UK. The equivalent SLAM Dream Air is around £1,774 before the ambassador discount. Whether that's worth it comes down to one question: are you after the best experience available in PC VR sim racing, or a very good headset that also does everything else? Both are defensible answers.</p>
+
+  <div class="cta">
+    <h3>Pimax Dream Air — ambassador discount</h3>
+    <p>Discount applied automatically at checkout. Fast UK delivery via local shipping. Free Discord support, and if anything goes wrong with your order I'll resolve it directly with my Pimax rep.</p>
+    <div class="btn-row">
+      <a class="btn" href="https://pimax.com/discount/nlsimgaming?redirect=%2Fproducts%2Fpimax-dream-air/?ref=nlsimgaming" data-partner="pimax" data-slot="cta-bottom">
+        Shop the Dream Air — discount applied
+      </a>
+      <button class="btn ghost" type="button" data-code="NLSIMGaming12" data-url="https://pimax.com/products/pimax-dream-air/?ref=nlsimgaming&amp;utm_source=nlsg&amp;utm_medium=guide&amp;utm_campaign=quest3-vs-dreamair&amp;utm_content=cta-bottom-iracing">
+        Or take 12 months of iRacing free
+      </button>
+    </div>
+    <p class="copy-note" role="status" aria-live="polite"></p>
+  </div>
+
+  <div class="cta">
+    <h3>Staying on the Quest 3?</h3>
+    <p>Nothing wrong with that. The AMVR stand is headset-agnostic, so it carries over if you do move later.</p>
+    <div class="btn-row">
+      <button class="btn ghost" type="button" data-code="NEXTLEVELSIM" data-url="https://www.amazon.co.uk/dp/B0BCG3ZWR4?maas=maas_adg_EA284C4D725325AE750B347E765DBC3E_afap_abs&amp;ref_=aa_maas&amp;tag=maas">
+        AMVR headset stand — 10% with <span class="code">NEXTLEVELSIM</span>
+      </button>
+    </div>
+    <p class="copy-note" role="status" aria-live="polite"></p>
+    <p style="margin:.9rem 0 0;font-size:.9rem"><a href="/codes.html">All channel discount codes →</a></p>
+  </div>
+
+  <div class="related">
+    <h3 style="margin-top:0">Keep going</h3>
+    <ul>
+      <li><a href="/iracing-dream-air-driver-setting.html">iRacing + Dream Air: the 90FPS driver setting nobody's talking about</a></li>
+      <li><a href="/pimax-setup-and-fix-guide.html">Pimax setup and fix guide</a></li>
+      <li><a href="/le-mans-ultimate-vr-settings.html">Le Mans Ultimate VR settings</a></li>
+      <li><a href="https://discord.gg/gw6xXkWtKa">PrimaShock settings and live help in the Discord</a></li>
+    </ul>
+  </div>
+
+  <p class="disclosure">Affiliate disclosure: I'm an approved Pimax Sim Racing Ambassador and earn a commission on purchases made through the links on this page, at no extra cost to you. Prices quoted were correct at the time of testing and move often — check the store for current figures.</p>
+</main>
 
 <footer>
   <div class="wrap">
-    <div class="footer-grid">
-      <a class="brand" href="index.html#top">
-        <span class="brand-mark">
-          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 24 L16 6 L28 24 L21 24 L16 15 L11 24 Z" fill="#F2A03D"/></svg>
-        </span>
-        <span class="brand-word">Next&nbsp;Level&nbsp;Sim&nbsp;Gaming</span>
-      </a>
-      <nav class="footer-links">
-        <a href="https://www.youtube.com/@nextlevelsimgaming" target="_blank" rel="noopener">YouTube</a>
-        <a href="https://x.com/nextlevelsim" target="_blank" rel="noopener">X</a>
-        <a href="https://discord.gg/gw6xXkWtKa" target="_blank" rel="noopener">Discord</a>
-        <a href="https://pimax.com/products/pimax-dream-air/?ref=nlsimgaming" target="_blank" rel="noopener">Pimax</a>
-        <a href="offer.html">Back to School Offer</a>
-        <a href="gallery.html#partners">Discount codes</a>
-        <a href="gallery.html">Gallery</a>
-      </nav>
-    </div>
-    <div class="footer-fine">
-      <span>&copy; 2026 Next Level Sim Gaming. All video content property of its creator.</span>
-      <span>Pimax Sim Racing Ambassador — code NLSimgaming</span>
-    </div>
+    <p><a href="https://www.youtube.com/@nextlevelsimgaming">YouTube</a> · <a href="https://x.com/nextlevelsim">X</a> · <a href="https://discord.gg/gw6xXkWtKa">Discord</a> · <a href="/codes.html">Discount codes</a></p>
+    <p>© 2026 Next Level Sim Gaming. Pimax Sim Racing Ambassador — code NLSimgaming</p>
   </div>
 </footer>
 
+<script>
+document.querySelectorAll('button[data-code]').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var code = btn.getAttribute('data-code');
+    var url = btn.getAttribute('data-url');
+    var note = btn.closest('.cta').querySelector('.copy-note');
+
+    // Open first, in the same user gesture, so popup blockers don't eat it.
+    var win = window.open(url, '_blank', 'noopener');
+
+    var done = function () {
+      if (note) {
+        note.textContent = code + ' copied — paste it at checkout.';
+        note.classList.add('live');
+      }
+    };
+    var failed = function () {
+      if (note) {
+        note.textContent = 'Copy the code manually: ' + code;
+        note.classList.add('live');
+      }
+    };
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(code).then(done).catch(failed);
+    } else {
+      try {
+        var t = document.createElement('textarea');
+        t.value = code;
+        t.setAttribute('readonly', '');
+        t.style.position = 'absolute';
+        t.style.left = '-9999px';
+        document.body.appendChild(t);
+        t.select();
+        document.execCommand('copy');
+        document.body.removeChild(t);
+        done();
+      } catch (e) {
+        failed();
+      }
+    }
+
+    if (!win && note) {
+      note.textContent = code + ' copied — allow pop-ups, or use the link below.';
+    }
+  });
+});
+</script>
+
+<script>
+/* Outbound affiliate click tracking.
+   UTMs can't ride along on the Pimax discount-prefill URLs, so attribution by
+   page is recorded here instead. Fires into Google Analytics (gtag or
+   dataLayer) if either is present, and does nothing if neither is. */
+(function () {
+  function send(partner, slot) {
+    var payload = {
+      partner: partner,
+      slot: slot || 'unspecified',
+      page: location.pathname
+    };
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'affiliate_click', payload);
+    } else if (Array.isArray(window.dataLayer)) {
+      payload.event = 'affiliate_click';
+      window.dataLayer.push(payload);
+    }
+  }
+
+  function partnerFrom(el) {
+    if (el.getAttribute('data-partner')) return el.getAttribute('data-partner');
+    var href = el.getAttribute('href') || el.getAttribute('data-url') || '';
+    try { return new URL(href, location.origin).hostname.replace(/^www\./, ''); }
+    catch (e) { return 'unknown'; }
+  }
+
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('a[href], button[data-url]');
+    if (!el) return;
+    var href = el.getAttribute('href') || el.getAttribute('data-url') || '';
+    if (!/^https?:/i.test(href)) return;
+    try {
+      if (new URL(href).hostname === location.hostname) return;
+    } catch (err) { return; }
+    send(partnerFrom(el), el.getAttribute('data-slot'));
+  });
+})();
+</script>
 </body>
 </html>

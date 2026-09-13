@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tobii Eye Tracker 5 for ATS and ETS2 — head, gaze and roll tracking | Next Level Sim Gaming</title>
+<meta name="description" content="Tobii Eye Tracker 5 in American Truck Simulator and Euro Truck Simulator 2 — head look, gaze and the roll feature nothing else does, plus setup and in-game configuration.">
+<link rel="canonical" href="https://nextlevelsimgaming.co.uk/tobii.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tobii Eye Tracker 5 for ATS and ETS2">
+<meta property="og:description" content="Head look, gaze and roll — tested across a full drive in the Nordic Horizons DLC.">
+<meta property="og:image" content="https://i.ytimg.com/vi/A9sToaQD_aM/maxresdefault.jpg">
+<meta property="og:url" content="https://nextlevelsimgaming.co.uk/tobii.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@nextlevelsim">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#12151C;--ink-2:#1A1E27;--ink-3:#232833;
+  --amber:#F2A03D;--crimson:#D94A3D;
+  --paper:#E8EAEE;--paper-dim:#9BA3B2;--line:#2C3240;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ink);color:var(--paper);font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:17px;line-height:1.65}
+a{color:var(--amber)}
+.wrap{max-width:44rem;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:"Saira Condensed",sans-serif;font-weight:700;line-height:1.1;margin:0 0 .5rem}
+h1{font-size:clamp(2rem,7vw,3.1rem);margin-top:1.5rem}
+h2{font-size:clamp(1.5rem,4.5vw,2.1rem);margin-top:3rem;padding-top:1.25rem;border-top:1px solid var(--line)}
+h3{font-size:1.2rem;margin-top:1.75rem;color:var(--amber)}
+p{margin:0 0 1.1rem}
+
+.bar{border-bottom:1px solid var(--line);background:var(--ink-2)}
+.bar .wrap{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;align-items:center;padding-top:.85rem;padding-bottom:.85rem}
+.brand{font-family:"Saira Condensed",sans-serif;font-weight:700;font-size:1.15rem;color:var(--paper);text-decoration:none}
+.bar nav{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:"IBM Plex Mono",monospace;font-size:.78rem}
+.bar nav a{color:var(--paper-dim);text-decoration:none}
+.bar nav a:hover,.bar nav a:focus{color:var(--amber)}
+.bar nav a[aria-current]{color:var(--amber)}
+
+.crumb{font-family:"IBM Plex Mono",monospace;font-size:.75rem;color:var(--paper-dim);margin:1.75rem 0 0}
+.crumb a{color:var(--paper-dim)}
+.badge{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.06em;color:var(--ink);background:var(--amber);padding:.28rem .6rem;border-radius:2px;margin-top:1.5rem}
+.standfirst{font-size:1.15rem;color:var(--paper-dim);margin-bottom:2rem}
+
+.verdict{background:var(--ink-2);border-left:3px solid var(--amber);padding:1.4rem 1.4rem .4rem;margin:0 0 1.75rem;border-radius:2px}
+.verdict h2{margin:0 0 .75rem;border:0;padding:0;font-size:1.55rem}
+.split{display:grid;grid-template-columns:1fr;gap:1rem;margin-bottom:1rem}
+@media(min-width:40rem){.split{grid-template-columns:1fr 1fr;gap:1.5rem}}
+.split h3{margin-top:0;font-size:1rem;font-family:"IBM Plex Mono",monospace;font-weight:500;letter-spacing:.04em}
+.split .no h3{color:var(--crimson)}
+.split ul{margin:0;padding-left:1.1rem}
+.split li{margin-bottom:.45rem;font-size:.96rem}
+
+.cta{background:var(--ink-3);border:1px solid var(--line);border-radius:3px;padding:1.5rem;margin:2.25rem 0}
+.cta h3{margin:0 0 .5rem;color:var(--paper);font-size:1.45rem}
+.cta p{font-size:.95rem;color:var(--paper-dim);margin-bottom:1.1rem}
+.btn-row{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:"Saira Condensed",sans-serif;font-weight:700;font-size:1.1rem;padding:.7rem 1.4rem;border-radius:3px;text-decoration:none;border:0;cursor:pointer;background:var(--amber);color:var(--ink)}
+.btn:hover,.btn:focus{background:#ffb457}
+.btn.ghost{background:transparent;color:var(--amber);border:1px solid var(--amber);font-family:"IBM Plex Mono",monospace;font-size:.85rem;font-weight:500}
+.btn.ghost:hover,.btn.ghost:focus{background:rgba(242,160,61,.12)}
+:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+
+.videos{display:grid;grid-template-columns:1fr;gap:1.75rem;margin:1.5rem 0}
+@media(min-width:46rem){.videos{grid-template-columns:1fr 1fr}}
+.vid h3{margin:0 0 .5rem;font-size:1.05rem;color:var(--paper);font-family:"IBM Plex Sans",sans-serif;font-weight:600;line-height:1.35}
+.vid p{font-size:.9rem;color:var(--paper-dim);margin:.5rem 0 0}
+.frame{position:relative;padding-bottom:56.25%;height:0;background:var(--ink-2);border-radius:3px;overflow:hidden}
+.frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+.aside{border-left:2px solid var(--line);padding-left:1rem;color:var(--paper-dim);font-size:.95rem;margin:1.5rem 0}
+.disclosure{font-size:.8rem;color:var(--paper-dim);margin:2rem 0 0;padding-top:1.25rem;border-top:1px solid var(--line)}
+footer{margin-top:3.5rem;padding:2rem 0;border-top:1px solid var(--line);background:var(--ink-2);font-size:.85rem;color:var(--paper-dim)}
+footer .wrap p{margin:0 0 .5rem}
+footer a{color:var(--paper-dim)}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <div class="wrap">
+    <a class="brand" href="/index.html">Next Level Sim Gaming</a>
+    <nav>
+      <a href="/index.html#videos">Latest</a>
+      <a href="/pimax.html">Pimax</a>
+      <a href="/ats-ets2.html">ATS / ETS2</a>
+      <a href="/pimax-setup-and-fix-guide.html">Fix Guide</a>
+      <a href="/tobii.html" aria-current="page">Tobii</a>
+      <a href="/codes.html">Discount codes</a>
+      <a href="https://discord.gg/gw6xXkWtKa">Discord</a>
+      <a href="https://www.youtube.com/@nextlevelsimgaming?sub_confirmation=1">Subscribe</a>
+    </nav>
+  </div>
+</div>
+
+<main class="wrap">
+  <p class="crumb"><a href="/index.html">Home</a> / Tobii Eye Tracker 5</p>
+  <p class="badge">Tobii Ambassador</p>
+
+  <h1>Tobii Eye Tracker 5 for ATS and ETS2</h1>
+  <p class="standfirst">Head and eye tracking for flat-screen driving — and the single best accessory I've used for American Truck Simulator and Euro Truck Simulator 2. I approached Tobii about this one, not the other way round.</p>
+
+  <div class="verdict">
+    <h2>Three things it does</h2>
+    <p>A small infrared unit sits above or below your monitor and tracks your head and your eyes separately. That gives you three distinct movements, and it's the third one that separates it from a webcam or a TrackIR.</p>
+    <ul style="margin:0 0 1.1rem;padding-left:1.1rem">
+      <li style="margin-bottom:.5rem"><strong>Head look.</strong> Turn your head and the view turns with you — checking a junction, looking down the side of the trailer.</li>
+      <li style="margin-bottom:.5rem"><strong>Gaze.</strong> Eyes only, head still. Glance at a mirror or the sat nav and the view drifts gently across, then re-centres when you look forward again.</li>
+      <li style="margin-bottom:.5rem"><strong>Roll.</strong> Tilt your head and the horizon tilts with it, instantly. Nothing else in this category does it, and it's what turns the whole thing from a look-around gadget into something close to sitting in the cab.</li>
+    </ul>
+    <div class="split">
+      <div class="yes">
+        <h3>Worth it if</h3>
+        <ul>
+          <li>You drive ATS or ETS2 on a screen and want to stop mapping look-buttons to a wheel or button box</li>
+          <li>You run an ultrawide — the combination is better than either part suggests</li>
+          <li>You care about realism enough to be running heavy graphics mods already</li>
+          <li>You also race or fly: it works in F1 25, Automobilista 2 and Microsoft Flight Simulator among others</li>
+        </ul>
+      </div>
+      <div class="no">
+        <h3>Skip it if</h3>
+        <ul>
+          <li>You play entirely in a headset — you already have real head movement</li>
+          <li>Your titles have no supported implementation</li>
+          <li>You're saving toward a VR headset and this would delay it</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta">
+    <h3>Get the Eye Tracker 5</h3>
+    <p>I asked Tobii to sort a discount for the channel and they did. It's applied automatically through the link — there's no code to enter.</p>
+    <div class="btn-row">
+      <a class="btn" href="https://tobii.gg/nextlevelsimgaming" data-partner="tobii" data-slot="tobii-top">Open Tobii</a>
+      <a class="btn ghost" href="/codes.html">All channel discount codes</a>
+    </div>
+  </div>
+
+  <h2>On the channel</h2>
+  <p>Not a demo reel — it's in use across every graphics guide on the channel.</p>
+
+  <div class="frame">
+    <iframe src="https://www.youtube.com/embed/A9sToaQD_aM" title="Tobii Eye Tracker 5 for ATS and ETS2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+  </div>
+  <p style="font-size:.95rem;color:var(--paper-dim);margin-top:.75rem">Head look, gaze and roll demonstrated on a drive through the Nordic Horizons DLC in a Volvo FH16, with the tracker window on screen so you can see exactly what it's reading.</p>
+
+  <h3>Used throughout the graphics guides</h3>
+  <p style="font-size:.95rem;color:var(--paper-dim)">Every one of these is a full mods and ReShade walkthrough driven with the Eye Tracker 5 running, so you can judge it over a whole video rather than a demo clip.</p>
+
+  <div class="videos">
+
+    <div class="vid">
+      <div class="frame">
+        <iframe src="https://www.youtube.com/embed/Yg67adDjAm8" title="ATS 1.59 — Project Next Gen 2.0, Simuverse ReShade and Snowy Moon" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <h3>ATS — Project Next Gen 2.0 and the Simuverse ReShade</h3>
+      <p>The 2.0 rain overhaul and road reflections, the Jon Ruda W900 Highway Killer, plus my own Snowy Moon lighting settings rather than the defaults.</p>
+    </div>
+
+    <div class="vid">
+      <div class="frame">
+        <iframe src="https://www.youtube.com/embed/k-l3FH9eZRw" title="ETS2 — Project Ultimate ReShade and weather with Angus May" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <h3>ETS2 — Project Ultimate ReShade and weather</h3>
+      <p>A collaboration with Angus May, including a free sample ReShade, the directional rain that sets Project Ultimate apart, and a clean ReShade reinstall that fixes the effects errors people hit.</p>
+    </div>
+
+    <div class="vid">
+      <div class="frame">
+        <iframe src="https://www.youtube.com/embed/1p0ISA2IsxQ" title="ATS 1.58 — Simuverse ReShade and Snowy Moon settings" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <h3>ATS 1.58 — Simuverse ReShade and the chrome fix</h3>
+      <p>A free Simuverse ReShade, the tone map and reflection settings that stop Snowy Moon dulling your chrome, and the infinite seat adjustment for a real truck view.</p>
+    </div>
+
+    <div class="vid">
+      <div class="frame">
+        <iframe src="https://www.youtube.com/embed/OPo2DKJJF3o" title="ATS — ReShade, Project Next Gen and Snowy Moon install guide" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <h3>ATS — the full ReShade and mods install</h3>
+      <p>The one to start with. Where mods come from, the DXGI rename that lets ReShade and Snowy Moon coexist, load order, and the config changes that stop the crashes.</p>
+    </div>
+
+  </div>
+
+  <h2>Tobii in a headset is a different thing</h2>
+  <p>Worth clearing up, because the name appears twice on this site. The Pimax Dream Air has Tobii eye tracking built into the headset, where it drives dynamic foveated rendering — full resolution where you're looking, less work in your peripheral vision, which buys back performance. Pimax use Tobii because they're the industry leader in eye tracking, which is about the best endorsement the hardware could have. But that's a VR feature and it's already inside the headset.</p>
+  <p>The Eye Tracker 5 on this page is a separate desk-mounted device for people on screens. If you race in a headset you don't need it. If you race on a monitor it's the closest you'll get to looking around a cockpit naturally.</p>
+  <div class="aside"><p>Not sure which side of that line you're on? The <a href="/quest-3-vs-pimax-dream-air.html">Quest 3 vs Dream Air comparison</a> lays out what moving to VR actually costs and gains.</p></div>
+
+  <h2>Setting it up</h2>
+  <p>Out of the box it's genuinely plug and play. Mount it above or below the monitor, plug it into a USB port, and the software installs itself when the PC boots. Calibration is a quick routine where you follow a point around the screen, and after that you just open or close the app depending on whether you want it running.</p>
+  <p>Line of sight matters less than you'd expect. Mine sits under an ultrawide with a MOZA wheel and a CM dash partly in the way, and it still tracks cleanly.</p>
+  <p>The per-game tuning happens in the game itself. In ETS2 it's at the bottom of the controls menu — an Eye Tracker 5 box with a configure option, where you set sensitivity for each axis and turn on features like roll. Sensitivity is personal, so expect to spend a few minutes finding yours.</p>
+  <p>Questions, or want a hand dialling it in? The <a href="https://discord.gg/gw6xXkWtKa">Discord</a> is the fastest way to get an answer.</p>
+
+  <div class="cta">
+    <h3>Tobii Eye Tracker 5</h3>
+    <p>Discount applied automatically — no code needed. Every purchase helps fund the guides.</p>
+    <div class="btn-row">
+      <a class="btn" href="https://tobii.gg/nextlevelsimgaming" data-partner="tobii" data-slot="tobii-bottom">Open Tobii</a>
+    </div>
+  </div>
+
+  <p class="disclosure">Affiliate disclosure: I'm an approved Tobii Ambassador and earn a commission on purchases made through the link on this page, at no extra cost to you. It funds the testing and doesn't change what gets said about the product.</p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="https://www.youtube.com/@nextlevelsimgaming">YouTube</a> · <a href="https://x.com/nextlevelsim">X</a> · <a href="https://discord.gg/gw6xXkWtKa">Discord</a> · <a href="/codes.html">Discount codes</a></p>
+    <p>© 2026 Next Level Sim Gaming. Pimax Sim Racing Ambassador · Tobii Ambassador</p>
+  </div>
+</footer>
+
+
+<script>
+/* Outbound affiliate click tracking.
+   UTMs can't ride along on the Pimax discount-prefill URLs, so attribution by
+   page is recorded here instead. Fires into Google Analytics (gtag or
+   dataLayer) if either is present, and does nothing if neither is. */
+(function () {
+  function send(partner, slot) {
+    var payload = {
+      partner: partner,
+      slot: slot || 'unspecified',
+      page: location.pathname
+    };
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'affiliate_click', payload);
+    } else if (Array.isArray(window.dataLayer)) {
+      payload.event = 'affiliate_click';
+      window.dataLayer.push(payload);
+    }
+  }
+
+  function partnerFrom(el) {
+    if (el.getAttribute('data-partner')) return el.getAttribute('data-partner');
+    var href = el.getAttribute('href') || el.getAttribute('data-url') || '';
+    try { return new URL(href, location.origin).hostname.replace(/^www\./, ''); }
+    catch (e) { return 'unknown'; }
+  }
+
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('a[href], button[data-url]');
+    if (!el) return;
+    var href = el.getAttribute('href') || el.getAttribute('data-url') || '';
+    if (!/^https?:/i.test(href)) return;
+    try {
+      if (new URL(href).hostname === location.hostname) return;
+    } catch (err) { return; }
+    send(partnerFrom(el), el.getAttribute('data-slot'));
+  });
+})();
+</script>
+</body>
+</html>
