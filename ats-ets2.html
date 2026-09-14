@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
+<script defer src="/cookie-consent.js"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ATS and ETS2 graphics guides — ReShade, Project Next Gen and Snowy Moon | Next Level Sim Gaming</title>
@@ -169,7 +170,7 @@ footer a{color:var(--paper-dim)}
   <h2>The two things people get wrong</h2>
 
   <h3>ReShade has to be version 6.50</h3>
-  <p>Newer builds don't work with ATS or ETS2. The installer will warn you that your build is outdated — ignore it. If you've had ReShade installed before, uninstall it first and then delete every leftover in the game's <code>bin\Win_x64</code> folder: the log files and the shaders folder. Those leftovers are the single most common cause of the error saying the effects couldn't be installed.</p>
+  <p>Newer builds don't work with ATS or ETS2. The installer will warn you that your build is outdated — ignore it. If you've had ReShade installed before, uninstall it first and then delete every leftover in the game's <code>bin\\Win_x64</code> folder: the log files and the shaders folder. Those leftovers are the single most common cause of the error saying the effects couldn't be installed.</p>
 
   <h3>ReShade and Snowy Moon both want the same file</h3>
   <p>Both ship a <code>dxgi.dll</code>, and two of them can't live in the same folder. After installing ReShade, rename its <code>dxgi.dll</code> to <code>d3d11.dll</code> — a super extension that loads the same way. Then drop Snowy Moon's <code>dxgi.dll</code> and <code>dinput8.dll</code> in alongside it and both run happily together.</p>
@@ -192,7 +193,7 @@ footer a{color:var(--paper-dim)}
   <p>Paid mods often ship their own required order — Pizzter and Jon Ruda both do — so follow theirs where it conflicts with the general rule. If things break, Steam's <em>verify integrity of installed files</em> and the <em>find best load order</em> option under the Workshop tab will usually sort it.</p>
 
   <h2>Config settings worth changing</h2>
-  <p>In <code>Documents\American Truck Simulator\config.cfg</code> (or the ETS2 equivalent):</p>
+  <p>In <code>Documents\\American Truck Simulator\\config.cfg</code> (or the ETS2 equivalent):</p>
   <table>
     <thead><tr><th>Setting</th><th>What to do</th></tr></thead>
     <tbody>
