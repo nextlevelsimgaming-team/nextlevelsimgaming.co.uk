@@ -78,7 +78,7 @@
         'font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#EDEFF3;}' +
       '#cc-banner .cc-wrap{max-width:1180px;margin:0 auto;padding:1rem 1.5rem;' +
         'display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;}' +
-      '#cc-banner p{margin:0;font-size:0.88rem;line-height:1.5;color:#C7CCD8;max-width:56ch;flex:1 1 260px;}' +
+      '#cc-banner p{margin:0;font-size:0.88rem;line-height:1.5;color:#C7CCD8;max-width:56ch;flex:1 1 auto;min-width:260px;}' +
       '#cc-banner a{color:#F2A03D;text-decoration:underline;}' +
       '#cc-banner .cc-actions{display:flex;gap:0.7rem;flex:none;}' +
       '#cc-banner button{font-family:inherit;font-size:0.85rem;font-weight:600;padding:0.6em 1.2em;' +
@@ -88,6 +88,7 @@
       '#cc-banner .cc-accept{background:#F2A03D;color:#1A1204;}' +
       '#cc-banner .cc-accept:hover{background:#FFB25A;}' +
       '@media (max-width:640px){#cc-banner .cc-wrap{flex-direction:column;align-items:stretch;}' +
+        '#cc-banner p{min-width:0;max-width:none;}' +
         '#cc-banner .cc-actions{justify-content:flex-end;}}' +
       '.cc-settings-link{cursor:pointer;}';
     document.head.appendChild(style);
