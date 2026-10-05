@@ -106,6 +106,31 @@ li{margin-bottom:.5rem}
 .btn-row{display:flex;flex-wrap:wrap;gap:.75rem}
 :focus-visible{outline:2px solid var(--amber);outline-offset:2px}
 
+/* ambassador support pledge */
+.pledge{--lime:#8ee03d;position:relative;margin:3rem 0;padding:1.75rem 1.5rem;border:1px solid rgba(142,224,61,.45);border-radius:6px;background:radial-gradient(120% 80% at 50% 0%,rgba(142,224,61,.13),transparent 60%),var(--ink-2);box-shadow:0 18px 50px -22px rgba(142,224,61,.3)}
+.pledge .kicker{font-family:"IBM Plex Mono",monospace;font-size:.74rem;letter-spacing:.08em;color:var(--lime);margin:0 0 .4rem}
+.pledge h2{border:0;padding:0;margin:0 0 .8rem;font-size:clamp(1.8rem,5.5vw,2.6rem)}
+.pledge .lead{font-size:1.08rem;color:var(--paper);margin:0 0 1.25rem}
+.pledge figure{margin:1.25rem 0 1.5rem}
+.pledge figure img{display:block;width:100%;height:auto;border-radius:6px;border:1px solid rgba(142,224,61,.5);box-shadow:0 0 30px rgba(142,224,61,.22)}
+.pledge figcaption{font-family:"IBM Plex Mono",monospace;font-size:.72rem;color:var(--paper-dim);margin-top:.55rem}
+.pledges{list-style:none;padding:0;margin:0;display:grid;gap:1rem;counter-reset:p}
+.pledges li{counter-increment:p;position:relative;margin:0;background:var(--ink);border:1px solid var(--line);border-left:3px solid var(--lime);border-radius:4px;padding:1.1rem 1.1rem 1rem 3.7rem}
+.pledges li::before{content:counter(p);position:absolute;left:1rem;top:1.05rem;width:1.8rem;height:1.8rem;border-radius:50%;background:var(--lime);color:#0c1206;font-family:"Saira Condensed",sans-serif;font-weight:700;display:flex;align-items:center;justify-content:center}
+.pledges h3{margin:0 0 .5rem;color:var(--paper);font-size:1.3rem}
+.pledges blockquote{margin:0 0 .7rem;padding:0;font-size:1.03rem;font-style:italic;color:var(--paper)}
+.pledges .real{margin:0;font-size:.92rem;color:var(--paper-dim)}
+.pledges .real strong{color:var(--lime);font-weight:600}
+.pledge .sign{font-family:"IBM Plex Mono",monospace;font-size:.74rem;color:var(--paper-dim);margin:.9rem 0 0}
+.pledge .compare{margin:1.5rem 0 0;padding:1rem 1.1rem;border-radius:4px;background:rgba(142,224,61,.08);border:1px dashed rgba(142,224,61,.5);font-weight:500}
+.pledge .btn-row{margin-top:1.25rem}
+.btn.lime{background:#8ee03d;color:#0c1206}
+.btn.lime:hover,.btn.lime:focus{background:#a6f05f}
+.btn.ghost.lime-ghost{color:#8ee03d;border-color:#8ee03d}
+.btn.ghost.lime-ghost:hover,.btn.ghost.lime-ghost:focus{background:rgba(142,224,61,.12)}
+.offer > p.pledge-teaser{font-size:.95rem;margin:-.5rem 0 1.25rem}
+.offer > p.pledge-teaser a{color:#8ee03d;font-weight:600}
+
 .box{background:var(--ink-2);border:1px solid var(--line);border-left:3px solid var(--amber);border-radius:3px;padding:1.35rem 1.35rem .5rem;margin:1.75rem 0}
 .box h3{margin-top:0;color:var(--paper)}
 .aside{border-left:2px solid var(--line);padding-left:1rem;color:var(--paper-dim);font-size:.95rem;margin:1.5rem 0}
@@ -150,7 +175,7 @@ footer a{color:var(--paper-dim)}
 <p class="badge">Approved Pimax Sim Racing Ambassador</p>
 
 <h1>Pimax discount code &amp; best deals</h1>
-<p class="updated">Updated 1 October 2026 · Code checked this month</p>
+<p class="updated">Updated 5 October 2026 · Code checked this month</p>
 <p class="standfirst">The best way to buy a Pimax headset right now: ambassador code <strong>NLSimgaming</strong>, applied automatically on the Dream Air, Dream Air SE, Crystal Super and Crystal Light. Join our free Discord to be first to hear about extra Pimax offers. Every headset here has been on the rig for real iRacing, Le Mans Ultimate and Assetto Corsa sessions.</p>
 
 <!-- ==========================================================
@@ -161,6 +186,7 @@ Update the "Updated" date above and the title month each month.
 <p class="kicker">Ambassador offer</p>
 <h2>Use code NLSimgaming</h2>
 <p>Use my ambassador code NLSimgaming and the discount is applied automatically through the links below. Prefer to type it? Enter NLSimgaming at checkout on the Pimax store.</p>
+<p class="pledge-teaser">Every order is backed by my <a href="#ambassador-support">Ambassador Support Pledge</a>: free Discord help and a direct line to my Pimax representative if anything goes wrong.</p>
 
 <div class="deals">
 <div class="deal">
@@ -206,6 +232,46 @@ Update the "Updated" date above and the title month each month.
 </div>
 <!-- ================ END AMBASSADOR OFFER ================ -->
 
+<!-- ================ AMBASSADOR SUPPORT PLEDGE ================ -->
+<section class="pledge" id="ambassador-support" aria-labelledby="pledge-title">
+<p class="kicker">THE AMBASSADOR SUPPORT PLEDGE</p>
+<h2 id="pledge-title">Buy a Pimax headset knowing someone has your back</h2>
+<p class="lead">A headset this good shouldn't leave you on your own the moment the box lands. Every order placed through my ambassador link comes with three promises, straight from the Pimax Sim Racing Ambassador Support Program.</p>
+
+<figure>
+<img src="/ambassador-program.jpg" width="1024" height="572" loading="lazy" decoding="async" alt="Pimax Approved Sim Racing Ambassador badge above the Ambassador Support Program: exclusive discounts, free Discord community support and dedicated ambassador support">
+<figcaption>The Ambassador Support Program: exclusive perks and dedicated service.</figcaption>
+</figure>
+
+<ol class="pledges">
+<li>
+<h3>Exclusive discounts</h3>
+<blockquote>&ldquo;Discount off your Pimax purchase and other exclusive channel discounts.&rdquo;</blockquote>
+<p class="real"><strong>In practice:</strong> code NLSimgaming is applied automatically through every Shop button on this page, so there is nothing to hunt for at checkout.</p>
+</li>
+<li>
+<h3>Free Discord community support</h3>
+<blockquote>&ldquo;Everything from setting up your Pimax Headset to guides for all popular Sim Racing titles.&rdquo;</blockquote>
+<p class="real"><strong>In practice:</strong> the <a href="https://discord.gg/gw6xXkWtKa">NLSG Discord</a> is completely free to join. Setup help from the team and community, plus settings for iRacing, Le Mans Ultimate, Assetto Corsa and more. No subscription, no payment.</p>
+</li>
+<li>
+<h3>Dedicated ambassador support</h3>
+<blockquote>&ldquo;If you experience any issues with your purchase I will resolve them with my dedicated Pimax Representative.&rdquo;</blockquote>
+<p class="real"><strong>In practice:</strong> send me your Pimax order number privately on Discord and I'll raise it directly with my Pimax representative. Please don't post order details publicly.</p>
+</li>
+</ol>
+<p class="sign">&mdash; Gary, Next Level Sim Gaming &middot; Approved Pimax Sim Racing Ambassador</p>
+
+<p class="compare">Buy anywhere else and you get a headset. Buy through the ambassador link and you get the headset, a discount, a free community that has already solved most setup problems, and a named person to chase if anything goes wrong.</p>
+
+<div class="btn-row">
+<a class="btn lime" href="#offer">Claim the discount and the pledge</a>
+<a class="btn ghost lime-ghost" href="https://discord.gg/gw6xXkWtKa" data-partner="discord" data-slot="pledge-discord">Join the free Discord</a>
+</div>
+<p class="sign">The pledge applies to orders placed through the ambassador links on this site. The Discord is free to join.</p>
+</section>
+<!-- ================ END AMBASSADOR SUPPORT PLEDGE ================ -->
+
 <h2>How to get the Pimax discount</h2>
 <ol class="steps">
 <li><strong>Click the Shop button</strong> for your headset above. NLSimgaming is applied automatically.</li>
@@ -234,12 +300,9 @@ Update the "Updated" date above and the title month each month.
 <p>You can take a 12-month iRacing subscription instead of the discount using code <strong>NLSIMGaming12</strong> at checkout. Worth comparing against the discount before you decide — for a lot of people the subscription is worth more.</p>
 </div>
 
-<h2>Why buy through the ambassador link</h2>
-<p>The discount is the small part. What actually matters is what happens if something goes wrong.</p>
+<h2>More reasons to buy through the ambassador link</h2>
 <ul>
-<li>Any issue with your order and I take it up directly with my Pimax representative on your behalf</li>
 <li>Exclusive extras for members of our free Discord when Pimax provides them, which aren't available elsewhere</li>
-<li>Free support in the Discord, where most configuration problems have already been solved by someone</li>
 <li>Fast UK delivery now that Pimax ship locally</li>
 <li>The same testing standard as everything on the channel — nothing gets recommended that hasn't been used for real sessions</li>
 </ul>
