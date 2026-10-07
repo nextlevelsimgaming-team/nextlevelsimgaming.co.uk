@@ -29,12 +29,8 @@ BEFORE GOING LIVE
    date. Same for the promo lines in codes.html and
    quest-3-vs-pimax-dream-air.html.
 
-3. Untested: the NLSIMGaming12 iRacing prefill link. The pattern
-   pimax.com/discount/nlsimgaming?redirect=... is confirmed working for the
-   discount; the nlsimgaming12 variant has not been tried.
-
-4. Missing: Dream Air SE product URL (section exists on pimax.html with no
+3. Missing: Dream Air SE product URL (section exists on pimax.html with no
    buy button).
 
-5. Click tracking fires an 'affiliate_click' event into gtag or dataLayer.
+4. Click tracking fires an 'affiliate_click' event into gtag or dataLayer.
    Does nothing if no analytics is installed.
