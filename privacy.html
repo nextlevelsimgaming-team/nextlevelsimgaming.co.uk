@@ -45,6 +45,24 @@ button.btn:hover{background:rgba(242,160,61,.12)}
 footer{margin-top:3rem;padding:2rem 0;border-top:1px solid var(--line);background:var(--ink-2);font-size:.85rem;color:var(--paper-dim)}
 footer a{color:var(--paper-dim)}
 footer p{margin:0 0 .5rem}
+
+/* tidy header (Oct 2026): brand and menu on one line, Discord as a button */
+.bar .wrap{max-width:72rem;flex-wrap:nowrap;justify-content:space-between;gap:1.75rem;padding-top:.7rem;padding-bottom:.7rem}
+.brand{white-space:nowrap;flex:none}
+.bar nav{flex-wrap:nowrap;align-items:center;gap:1.35rem;white-space:nowrap;overflow-x:auto;scrollbar-width:none}
+.bar nav::-webkit-scrollbar{display:none}
+.bar nav a{padding:.35rem 0}
+.bar nav a[aria-current]{color:var(--amber);box-shadow:inset 0 -2px 0 var(--amber)}
+.bar nav a.pill{background:#5865F2;color:#fff;padding:.32rem .75rem;border-radius:3px}
+.bar nav a.pill:hover,.bar nav a.pill:focus{background:#6f7af5;color:#fff}
+.bar nav a.pill.yt{background:#D94A3D}
+.bar nav a.pill.yt:hover,.bar nav a.pill.yt:focus{background:#e45d51}
+@media(max-width:62rem){
+.bar .wrap{flex-wrap:wrap;gap:.35rem 1rem}
+.bar nav{width:100%;padding-bottom:.15rem;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+}
+.crumb{margin-top:1.5rem}
+.crumb + .badge,.crumb + .newbadge{margin-top:.85rem}
 </style>
 </head>
 <body>
@@ -61,7 +79,7 @@ footer p{margin:0 0 .5rem}
       <a href="/tobii.html">Tobii</a>
       <a href="/codes.html">Discount codes</a>
       <a href="/elhydro-custom-fov-helmet-mod.html">FOV Mod</a>
-      <a href="https://discord.gg/gw6xXkWtKa">Discord</a>
+      <a class="pill" href="https://discord.gg/gw6xXkWtKa">Discord</a>
     </nav>
   </div>
 </div>
