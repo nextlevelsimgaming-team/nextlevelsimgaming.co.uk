@@ -164,6 +164,8 @@ table.spec td{color:var(--paper-dim)}
 .post-list p{margin:.5rem 0 0;color:var(--paper-dim);font-size:.95rem}
 .note{border-left:3px solid var(--crimson);background:var(--ink-2);padding:1rem 1.2rem;margin:1.5rem 0;font-size:.95rem;border-radius:0 3px 3px 0}
 .note strong{color:var(--paper)}
+.fig.narrow{max-width:25rem}
+.fig.mid{max-width:34rem}
 </style>
 </head>
 <body>
@@ -215,9 +217,17 @@ table.spec td{color:var(--paper-dim)}
 
 <h2>Crop by the car you drive</h2>
 <p>An F1 car and a rally car don't need the same view. NextLevelXR's visor categories set the vertical view for the type of car, from a 25° slot for open-wheelers up to 60° for an open visor, with 45° for touring cars as the default. An offset of up to ±5° slides that window up or down for your seat height without changing the render size.</p>
+<figure class="fig narrow">
+<img src="/nextlevelxr-visor-categories.png" width="398" height="400" alt="NextLevelXR Control crop settings with the Touring Cars visor category, an offset of 1.5 degrees and per-edge margins for the helmet" loading="lazy" decoding="async">
+<figcaption>Fixed window with the 45° Touring Cars category, a +1.5° offset, and margins saved for this helmet so no black shows at the edge.</figcaption>
+</figure>
 
 <h2>Auto SS: the most sharpness your GPU can hold</h2>
 <p>The right supersampling level depends on your GPU, the sim, the weather and how many cars are on track. So instead of guessing, NextLevelXR measures. Drive on track, press <strong>Ctrl+F12</strong>, and for ten seconds it times the GPU at your current settings. It then suggests the highest sharpness that fits about 90% of each frame, and one click saves it for that game.</p>
+<figure class="fig narrow">
+<img src="/nextlevelxr-auto-ss.png" width="398" height="417" alt="NextLevelXR Control supersampling settings shown as centre sharpness, with an Auto SS suggestion and an Apply button" loading="lazy" decoding="async">
+<figcaption>Supersampling as centre sharpness, and an Auto SS result ready to apply. The numbers shown are example values.</figcaption>
+</figure>
 
 <h2>A helmet that sits on your head</h2>
 <figure class="fig">
@@ -226,6 +236,10 @@ table.spec td{color:var(--paper-dim)}
 </figure>
 <p>The helmet view draws a racing helmet around your view, separately for each eye so the brow and padding have real depth. In 1.4.1 the helmet becomes a 3D shell you can bring as close as a few centimetres: each eye sees the rim from its own position using your real IPD, and the rim softens as it comes closer, because your eyes never focus on the edge of a real helmet either.</p>
 <p>It also works the other way round. <strong>Fit helmet to crop</strong> sizes the visor opening to your crop, so the helmet hides exactly the pixels that were never rendered. The helmet and the performance saving become the same thing.</p>
+<figure class="fig narrow">
+<img src="/nextlevelxr-helmet-settings.png" width="398" height="582" alt="NextLevelXR Control helmet settings including style, visor, size, stereo depth, distance, rim blur, comfort and quality" loading="lazy" decoding="async">
+<figcaption>Every helmet setting applies live while you drive, including the new Distance, Rim blur, Comfort and Quality.</figcaption>
+</figure>
 
 <h2>3D Boost and Pop</h2>
 <figure class="fig">
@@ -236,6 +250,14 @@ table.spec td{color:var(--paper-dim)}
 
 <h2>See what it's doing</h2>
 <p>A transparent panel in the headset shows FPS and CPU and GPU frame times (<strong>Ctrl+F10</strong>), and <strong>Ctrl+F11</strong> records every frame to a CSV so you can compare settings lap for lap.</p>
+<figure class="fig mid">
+<img src="/nextlevelxr-fps-panel.png" width="640" height="176" alt="NextLevelXR FPS panel showing 92 FPS, CPU 5.2 ms and GPU 5.1 ms with a recording indicator, floating over a sim" loading="lazy" decoding="async">
+<figcaption>The FPS panel in the headset: numbers only, no background. The red dot shows a capture is recording.</figcaption>
+</figure>
+<figure class="fig mid">
+<img src="/nextlevelxr-captures.png" width="582" height="300" alt="NextLevelXR Control performance captures table with average FPS, 1% and 0.1% lows and CPU and GPU times" loading="lazy" decoding="async">
+<figcaption>Captures are listed in the Control app with average FPS, lows and CPU and GPU times. These rows come from the test rig.</figcaption>
+</figure>
 
 <div class="box">
 <h3>Which sims?</h3>
