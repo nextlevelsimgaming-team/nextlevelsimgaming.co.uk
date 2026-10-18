@@ -211,7 +211,7 @@ table.spec td{color:var(--paper-dim)}
 <p class="newbadge">PREVIEW</p><p class="badge">NextLevelXR 1.4.1 · in testing</p>
 <h1>NextLevelXR: the VR mod that spends your GPU where you actually look</h1>
 <p class="updated">18 October 2026 · Gary Bowman</p>
-<p class="standfirst">A standalone OpenXR mod from Next Level Sim Gaming and Elhydro. It trims the parts of the VR image you never look at in a cockpit and puts the saved GPU power back into a sharper picture. No OpenXR Toolkit needed.</p>
+<p class="standfirst">A standalone OpenXR mod from Next Level Sim Gaming and Elhydro. It trims the parts of the VR image you never look at in a cockpit and puts the saved GPU power back into a sharper picture. It doesn't use the OpenXR Toolkit at all, and <a href="#no-openxr-toolkit">replaces it</a>.</p>
 
 <div class="note"><strong>This is a preview post.</strong> NextLevelXR is being tested by the team right now. Downloads, a video and real in-game numbers will follow here when it's ready. Join the <a href="https://discord.gg/gw6xXkWtKa">Discord</a> to hear first.</div>
 
@@ -219,6 +219,19 @@ table.spec td{color:var(--paper-dim)}
 <img src="/nextlevelxr-control-app.jpg" width="1272" height="826" alt="NextLevelXR Control app showing the FOV crop sliders, a preview of both eyes and the render size result for a Pimax Dream Air SE" fetchpriority="high" decoding="async">
 <figcaption>NextLevelXR Control: set the crop, see both eyes to scale and the render size it saves.</figcaption>
 </figure>
+
+<div class="box" id="no-openxr-toolkit">
+<h3>No OpenXR Toolkit. NextLevelXR replaces it.</h3>
+<p>NextLevelXR does not use the OpenXR Toolkit in any way. It's its own standalone OpenXR layer: you don't need the Toolkit installed, and none of its code is inside. For sim racing it's a complete replacement for what most of us used the Toolkit for, and it adds things the Toolkit never had.</p>
+<ul>
+<li><strong>FOV crop:</strong> every edge set on its own, both eyes always identical, plus visor categories by car type and per-edge margins.</li>
+<li><strong>Resolution and supersampling:</strong> the render size is cut to match the crop, sharpness is shown as "centre sharpness", and Auto SS finds what your GPU can hold.</li>
+<li><strong>Sharpening:</strong> Pop adds adaptive sharpening and mid-tone clarity, without halos.</li>
+<li><strong>FPS overlay:</strong> FPS, CPU and GPU frame times in the headset, plus CSV captures.</li>
+<li><strong>New, not in the Toolkit:</strong> a helmet view with real per-eye depth, 3D Boost, and a Windows app to set it all per game.</li>
+</ul>
+<p>NextLevelXR doesn't do upscaling (NIS / FSR), foveated rendering or hand tracking. If you rely on one of those, tell us on the <a href="https://discord.gg/gw6xXkWtKa">Discord</a>. Whatever you use, run only one FOV-cropping tool at a time, or the image gets cropped twice.</p>
+</div>
 
 <h2>The problem: pixels you never see</h2>
 <p>Every VR headset renders a tall, wide picture for each eye. In a sim rig most of the top of that picture is roof lining and most of the bottom is your own knees, but the GPU still draws every pixel of it, every frame. That's frame time you could be spending on the track in front of you.</p>
