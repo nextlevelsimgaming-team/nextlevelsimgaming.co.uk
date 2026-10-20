@@ -4,20 +4,20 @@
 <script defer src="/cookie-consent.js"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NextLevelXR: Standalone OpenXR FOV Crop &amp; Helmet Mod for VR Sim Racing | Next Level Sim Gaming</title>
-<meta name="description" content="NextLevelXR crops the parts of the VR image you never look at and puts the saved GPU power back into sharpness. FOV crop, Auto SS, helmet view, 3D Boost and an FPS panel, no OpenXR Toolkit needed.">
+<title>NextLevelXR 1.4.3: Standalone OpenXR FOV Crop, Helmets &amp; Creator Mode for VR | Next Level Sim Gaming</title>
+<meta name="description" content="NextLevelXR 1.4.3 crops the parts of the VR image you never look at and puts the saved GPU power back into sharpness. ShenronZero's helmets, Creator Mode for OBS, Auto SS and an FPS panel, fully signed, no OpenXR Toolkit needed.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://nextlevelsimgaming.co.uk/nextlevelxr-mod.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Next Level Sim Gaming">
 <meta property="og:title" content="NextLevelXR: a standalone OpenXR mod for sharper, faster sim racing in VR">
-<meta property="og:description" content="NextLevelXR crops the parts of the VR image you never look at and puts the saved GPU power back into sharpness. FOV crop, Auto SS, helmet view, 3D Boost and an FPS panel, no OpenXR Toolkit needed.">
+<meta property="og:description" content="NextLevelXR 1.4.3 crops the parts of the VR image you never look at and puts the saved GPU power back into sharpness. ShenronZero's helmets, Creator Mode for OBS, Auto SS and an FPS panel, fully signed, no OpenXR Toolkit needed.">
 <meta property="og:image" content="https://nextlevelsimgaming.co.uk/nextlevelxr-control-app.jpg">
 <meta property="og:url" content="https://nextlevelsimgaming.co.uk/nextlevelxr-mod.html">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@nextlevelsim">
 <meta name="twitter:title" content="NextLevelXR: a standalone OpenXR mod for sharper, faster sim racing in VR">
-<meta name="twitter:description" content="NextLevelXR crops the parts of the VR image you never look at and puts the saved GPU power back into sharpness. FOV crop, Auto SS, helmet view, 3D Boost and an FPS panel, no OpenXR Toolkit needed.">
+<meta name="twitter:description" content="NextLevelXR 1.4.3 crops the parts of the VR image you never look at and puts the saved GPU power back into sharpness. ShenronZero's helmets, Creator Mode for OBS, Auto SS and an FPS panel, fully signed, no OpenXR Toolkit needed.">
 <meta name="twitter:image" content="https://nextlevelsimgaming.co.uk/nextlevelxr-control-app.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,10 +37,10 @@
   {
    "@type": "BlogPosting",
    "headline": "NextLevelXR: a standalone OpenXR mod for sharper, faster sim racing in VR",
-   "description": "NextLevelXR crops the parts of the VR image you never look at and puts the saved GPU power back into sharpness. FOV crop, Auto SS, helmet view, 3D Boost and an FPS panel, no OpenXR Toolkit needed.",
+   "description": "NextLevelXR 1.4.3 crops the parts of the VR image you never look at and puts the saved GPU power back into sharpness. ShenronZero's helmets, Creator Mode for OBS, Auto SS and an FPS panel, fully signed, no OpenXR Toolkit needed.",
    "url": "https://nextlevelsimgaming.co.uk/nextlevelxr-mod.html",
    "datePublished": "2026-10-18",
-   "dateModified": "2026-10-18",
+   "dateModified": "2026-10-20",
    "inLanguage": "en-GB",
    "image": "https://nextlevelsimgaming.co.uk/nextlevelxr-control-app.jpg",
    "author": {"@type": "Person", "name": "Gary Bowman", "url": "https://nextlevelsimgaming.co.uk/"},
@@ -208,16 +208,27 @@ table.spec td{color:var(--paper-dim)}
 
 <main class="wrap">
 <p class="crumb"><a href="/index.html">Home</a> / <a href="/blog.html">Blog</a> / NextLevelXR</p>
-<p class="newbadge">PREVIEW</p><p class="badge">NextLevelXR 1.4.1 · in testing</p>
+<p class="newbadge">NEW IN 1.4.3</p><p class="badge">NextLevelXR 1.4.3 · fully signed</p>
 <h1>NextLevelXR: the VR mod that spends your GPU where you actually look</h1>
-<p class="updated">18 October 2026 · Gary Bowman</p>
-<p class="standfirst">A standalone OpenXR mod from Next Level Sim Gaming and Elhydro. It trims the parts of the VR image you never look at in a cockpit and puts the saved GPU power back into a sharper picture. It doesn't use the OpenXR Toolkit at all, and <a href="#no-openxr-toolkit">replaces it</a>.</p>
+<p class="updated">18 October 2026 · updated 20 October 2026 for 1.4.3 · Gary Bowman</p>
+<p class="standfirst">A standalone OpenXR mod from Next Level Sim Gaming and Elhydro, now with ShenronZero's helmet library. It trims the parts of the VR image you never look at in a cockpit and puts the saved GPU power back into a sharper picture. It doesn't use the OpenXR Toolkit at all, and <a href="#no-openxr-toolkit">replaces it</a>.</p>
 
-<div class="note"><strong>This is a preview post.</strong> NextLevelXR is being tested by the team right now. Downloads, a video and real in-game numbers will follow here when it's ready. Join the <a href="https://discord.gg/gw6xXkWtKa">Discord</a> to hear first.</div>
+<div class="box" id="whats-new">
+<h3>What's new in 1.4.3</h3>
+<ul>
+<li><strong>ShenronZero's helmets:</strong> ten real racing helmets, from open visor to Formula 1, with linings, visor tints, wear, glare, decals and scene lighting. <a href="#helmets">More below</a>.</li>
+<li><strong>Creator Mode for OBS:</strong> sends exactly what you see in the headset to OBS, with the whole helmet and the FPS panel. No mirror window to capture. <a href="#creator-mode">More below</a>.</li>
+<li><strong>A locked 90 with the FPS panel on:</strong> the panel and the settings checks now run off the game's render thread, so they cost the game nothing.</li>
+<li><strong>A better FPS panel:</strong> average FPS and 1% low, compact, standard and full layouts, and more positions.</li>
+<li><strong>Auto SS over a full lap,</strong> and an HTML report for every capture.</li>
+<li><strong>Fully digitally signed with Certum:</strong> the installer, the uninstaller, the mod, the app, the helmet module and every helper.</li>
+</ul>
+<p>Tested by the team in iRacing, Le Mans Ultimate, F1 25, Assetto Corsa EVO, Assetto Corsa, Automobilista 2 and ATS / ETS2. The signed installer comes to the <a href="https://discord.gg/gw6xXkWtKa">Discord</a>'s #downloads channel.</p>
+</div>
 
 <figure class="fig hero">
-<img src="/nextlevelxr-control-app.jpg" width="1272" height="826" alt="NextLevelXR Control app showing the FOV crop sliders, a preview of both eyes and the render size result for a Pimax Dream Air SE" fetchpriority="high" decoding="async">
-<figcaption>NextLevelXR Control: set the crop, see both eyes to scale and the render size it saves.</figcaption>
+<img src="/nextlevelxr-control-app.jpg" width="1272" height="826" alt="NextLevelXR Control 1.4.3 showing the FOV crop settings and the helmet and visor preview for a Pimax Dream Air SE" fetchpriority="high" decoding="async">
+<figcaption>NextLevelXR Control 1.4.3: the crop on the left, and a preview of your helmet and visor on the right.</figcaption>
 </figure>
 
 <div class="box" id="no-openxr-toolkit">
@@ -227,8 +238,8 @@ table.spec td{color:var(--paper-dim)}
 <li><strong>FOV crop:</strong> every edge set on its own, both eyes always identical, plus visor categories by car type and per-edge margins.</li>
 <li><strong>Resolution and supersampling:</strong> the render size is cut to match the crop, sharpness is shown as "centre sharpness", and Auto SS finds what your GPU can hold.</li>
 <li><strong>Sharpening:</strong> Pop adds adaptive sharpening and mid-tone clarity, without halos.</li>
-<li><strong>FPS overlay:</strong> FPS, CPU and GPU frame times in the headset, plus CSV captures.</li>
-<li><strong>New, not in the Toolkit:</strong> a helmet view with real per-eye depth, 3D Boost, and a Windows app to set it all per game.</li>
+<li><strong>FPS panel:</strong> FPS, average FPS, 1% low and CPU and GPU frame times in the headset, plus captures with a report.</li>
+<li><strong>New, not in the Toolkit:</strong> ShenronZero's helmets, Creator Mode for OBS, 3D Boost, and a Windows app to set it all per game.</li>
 </ul>
 <p>NextLevelXR doesn't do upscaling (NIS / FSR), foveated rendering or hand tracking. If you rely on one of those, tell us on the <a href="https://discord.gg/gw6xXkWtKa">Discord</a>. Whatever you use, run only one FOV-cropping tool at a time, or the image gets cropped twice.</p>
 </div>
@@ -244,32 +255,55 @@ table.spec td{color:var(--paper-dim)}
 <li><strong>It shrinks the render size to match.</strong> The game is asked for a smaller image, worked out in the same flat projection it draws, so the frame really gets cheaper rather than just being masked.</li>
 <li><strong>It puts the savings back into sharpness.</strong> Supersampling raises the resolution of what's left. Because the crop keeps the pixels in the middle of your view exactly as dense as native, sharpness is shown as simple "centre sharpness": 0% is native, +10% is sharper.</li>
 </ol>
-<p>On a Pimax Dream Air SE with its example crop, the game renders about 46% fewer pixels before supersampling. With Auto supersampling bringing sharpness back to native, it's still about a third fewer pixels than the headset's native picture. Those are calculator figures; in-game results are coming once testing finishes.</p>
+<p>On a Pimax Dream Air SE with its example crop, the game renders about 47% fewer pixels before supersampling. With supersampling bringing the centre 9% sharper than native, it's still 36% fewer pixels than the headset's native picture. One racer on the Discord saw his GPU load drop from 95–100% to 50–60% after cropping.</p>
 
 <h2>Crop by the car you drive</h2>
-<p>An F1 car and a rally car don't need the same view. NextLevelXR's visor categories set the vertical view for the type of car, from a 25° slot for open-wheelers up to 60° for an open visor, with 45° for touring cars as the default. An offset of up to ±5° slides that window up or down for your seat height without changing the render size.</p>
+<p>An F1 car and a rally car don't need the same view. NextLevelXR's visor categories set the vertical view for the type of car, from a 25° slot for open-wheelers up to 60° for an open visor, with 45° for touring cars as the default. An offset of up to ±5° slides that window up or down for your seat height without changing the render size. With a helmet on, the crop follows the helmet's opening instead.</p>
 <figure class="fig narrow">
-<img src="/nextlevelxr-visor-categories.png" width="398" height="400" alt="NextLevelXR Control crop settings with the Touring Cars visor category, an offset of 1.5 degrees and per-edge margins for the helmet" loading="lazy" decoding="async">
-<figcaption>Fixed window with the 45° Touring Cars category, a +1.5° offset, and margins saved for this helmet so no black shows at the edge.</figcaption>
+<img src="/nextlevelxr-visor-categories.png" width="392" height="395" alt="NextLevelXR Control crop settings with the Touring Cars visor category, an offset of 1.5 degrees and per-edge margins" loading="lazy" decoding="async">
+<figcaption>Fixed window with the 45° Touring Cars category, a +1.5° offset, and a small margin on three edges.</figcaption>
 </figure>
 
 <h2>Auto SS: the most sharpness your GPU can hold</h2>
-<p>The right supersampling level depends on your GPU, the sim, the weather and how many cars are on track. So instead of guessing, NextLevelXR measures. Drive on track, press <strong>Ctrl+F12</strong>, and for ten seconds it times the GPU at your current settings. It then suggests the highest sharpness that fits about 90% of each frame, and one click saves it for that game.</p>
+<p>The right supersampling level depends on your GPU, the sim, the weather and how many cars are on track. So instead of guessing, NextLevelXR measures. Press <strong>Ctrl+F12</strong> as you cross the start/finish line and again a lap later, and it times the GPU over the whole lap at your current settings. It then suggests the highest sharpness that fits about 90% of each frame, and one click saves it for that game. A full lap gives a safer answer than ten seconds on one straight.</p>
 <figure class="fig narrow">
-<img src="/nextlevelxr-auto-ss.png" width="398" height="417" alt="NextLevelXR Control supersampling settings shown as centre sharpness, with an Auto SS suggestion and an Apply button" loading="lazy" decoding="async">
+<img src="/nextlevelxr-auto-ss.png" width="404" height="500" alt="NextLevelXR Control supersampling settings shown as centre sharpness, with a lap-long Auto SS measurement and an Apply button" loading="lazy" decoding="async">
 <figcaption>Supersampling as centre sharpness, and an Auto SS result ready to apply. The numbers shown are example values.</figcaption>
 </figure>
 
-<h2>A helmet that sits on your head</h2>
+<h2 id="helmets">ShenronZero's helmets</h2>
 <figure class="fig">
-<img src="/nextlevelxr-helmet-distance.jpg" width="1400" height="456" alt="Test renders of the NLXR GT helmet as drawn, at 12 cm and at 5 cm from the eyes" loading="lazy" decoding="async">
-<figcaption>Left-eye test renders of the NLXR GT helmet at three distances. Closer, the rim shifts with your eye and softens.</figcaption>
+<img src="/nextlevelxr-helmets.jpg" width="1280" height="720" alt="Illustration of the Rally helmet with a lowered visor around a cockpit view" loading="lazy" decoding="async">
+<figcaption>The Rally helmet with a lowered visor (illustration). The Control app shows a preview of your choice.</figcaption>
 </figure>
-<p>The helmet view draws a racing helmet around your view, separately for each eye so the brow and padding have real depth. In 1.4.1 the helmet becomes a 3D shell you can bring as close as a few centimetres: each eye sees the rim from its own position using your real IPD, and the rim softens as it comes closer, because your eyes never focus on the edge of a real helmet either.</p>
-<p>It also works the other way round. <strong>Fit helmet to crop</strong> sizes the visor opening to your crop, so the helmet hides exactly the pixels that were never rendered. The helmet and the performance saving become the same thing.</p>
+<p>1.4.3 brings ShenronZero's full helmet library into NextLevelXR, replacing the old placeholder helmet. It puts a real racing helmet around your view: the shell, lining and visor are drawn for each eye and lit by the scene, so the helmet sits in the cockpit rather than on top of it.</p>
+<ul>
+<li><strong>Ten helmets</strong>, from an open visor to Formula 1, with lining colours.</li>
+<li><strong>Visors</strong> from clean to strong wear, eight tints and glare. <strong>Ctrl+F5</strong> raises or lowers the visor while you drive.</li>
+<li><strong>Scene lighting and dynamic brightness</strong>, plus head inertia and car response in AC and AC EVO.</li>
+<li><strong>Sponsor decals</strong> across the top of the visor, and decal packs you can import.</li>
+<li><strong>Direct3D 11 and 12</strong> games, including iRacing, AC, AMS2, LMU, ATS and ETS2.</li>
+</ul>
+<p>The helmet is also the crop: with helmets on, NextLevelXR crops to the helmet's opening, so the pixels it hides are never rendered. And when you untick <strong>Show the helmet</strong>, the helmet module isn't loaded at all and costs nothing.</p>
 <figure class="fig narrow">
-<img src="/nextlevelxr-helmet-settings.png" width="398" height="582" alt="NextLevelXR Control helmet settings including style, visor, size, stereo depth, distance, rim blur, comfort and quality" loading="lazy" decoding="async">
-<figcaption>Every helmet setting applies live while you drive, including the new Distance, Rim blur, Comfort and Quality.</figcaption>
+<img src="/nextlevelxr-helmet-settings.png" width="402" height="620" alt="NextLevelXR Control helmet settings by ShenronZero: helmet, lining colour, visor position, condition, tint, glare, brightness and stereo depth" loading="lazy" decoding="async">
+<figcaption>The helmet settings. Brightness, lighting, tint and visor position change live; the helmet, visor wear and decals apply after a game restart.</figcaption>
+</figure>
+
+<h2 id="creator-mode">Creator Mode: record exactly what you see</h2>
+<figure class="fig">
+<img src="/nextlevelxr-creator-mode.jpg" width="1280" height="720" alt="Illustration of the flat, centred picture Creator Mode sends to OBS, with the whole helmet and the FPS panel" loading="lazy" decoding="async">
+<figcaption>What OBS receives (illustration): the game from the middle of your head, the helmet centred, and the FPS panel where it sits in the headset.</figcaption>
+</figure>
+<p>Capturing one eye's view in OBS only ever showed part of the helmet, off to one side. Creator Mode fixes that: it draws a flat, centred 16:9 picture from the middle of your head, with the whole helmet and the FPS panel, and sends it straight to OBS. There's no mirror window on your desktop to capture, and it's off by default.</p>
+<ol class="steps">
+<li><strong>Turn it on.</strong> In NextLevelXR Control, tick <strong>Send what I see to OBS</strong>.</li>
+<li><strong>Add the source in OBS.</strong> Install Jabbah's OpenXR Mirror Capture plugin, add an <strong>OpenXR Mirror Capture</strong> source, and turn off Jabbah's own OpenXR layer.</li>
+<li><strong>Record or stream.</strong> The app shows when OBS is receiving the picture.</li>
+</ol>
+<figure class="fig narrow">
+<img src="/nextlevelxr-creator-settings.png" width="402" height="290" alt="NextLevelXR Control Creator Mode settings: send what I see to OBS, picture size, field of view, smoothing and eye" loading="lazy" decoding="async">
+<figcaption>Picture size from 720p to 4K, 60–120° wide, and optional smoothing for viewers. Direct3D 11 games for now.</figcaption>
 </figure>
 
 <h2>3D Boost and Pop</h2>
@@ -280,31 +314,37 @@ table.spec td{color:var(--paper-dim)}
 <p><strong>3D Boost</strong> renders the game with your eyes slightly further apart, so the cockpit and track stand out in stronger 3D. It costs nothing, and the headset still gets your real eye positions. <strong>Pop</strong> adds adaptive sharpening and mid-tone clarity without halos, and switches itself completely off when you don't use it.</p>
 
 <h2>See what it's doing</h2>
-<p>A transparent panel in the headset shows FPS and CPU and GPU frame times (<strong>Ctrl+F10</strong>), and <strong>Ctrl+F11</strong> records every frame to a CSV so you can compare settings lap for lap.</p>
+<p>A transparent panel in the headset shows FPS, average FPS and CPU and GPU frame times (<strong>Ctrl+F10</strong>). <strong>Ctrl+Shift+F10</strong> switches between compact, standard and full layouts; the full one adds the 1% low, a live frame-time graph, missed frames, CPU and GPU usage and graphics memory. In 1.4.3 the panel runs off the game's render thread, so a 90 Hz headset holds 90 with it on.</p>
 <figure class="fig mid">
-<img src="/nextlevelxr-fps-panel.png" width="640" height="176" alt="NextLevelXR FPS panel showing 92 FPS, CPU 5.2 ms and GPU 5.1 ms with a recording indicator, floating over a sim" loading="lazy" decoding="async">
-<figcaption>The FPS panel in the headset: numbers only, no background. The red dot shows a capture is recording.</figcaption>
+<img src="/nextlevelxr-fps-panel.png" width="640" height="176" alt="NextLevelXR FPS panel showing 90 FPS, CPU 6.2 ms, GPU 8.9 ms and an average of 89.6 FPS, with a recording indicator" loading="lazy" decoding="async">
+<figcaption>The standard FPS panel: numbers only, no background. The red dot shows a capture is recording.</figcaption>
 </figure>
+<p><strong>Ctrl+F11</strong> records every frame to a capture. Click it in the app and an HTML report opens with charts of every frame, the stutters and the lows, so you can compare settings lap for lap.</p>
 <figure class="fig mid">
-<img src="/nextlevelxr-captures.png" width="582" height="300" alt="NextLevelXR Control performance captures table with average FPS, 1% and 0.1% lows and CPU and GPU times" loading="lazy" decoding="async">
-<figcaption>Captures are listed in the Control app with average FPS, lows and CPU and GPU times. These rows come from the test rig.</figcaption>
+<img src="/nextlevelxr-captures.png" width="578" height="262" alt="NextLevelXR Control performance captures with average FPS, 1% and 0.1% lows and CPU and GPU times" loading="lazy" decoding="async">
+<figcaption>Last session and the captures list in the Control app. These rows come from the test rig.</figcaption>
 </figure>
 
 <div class="box">
 <h3>Which sims?</h3>
-<p>Native OpenXR sims such as iRacing, Assetto Corsa EVO and Le Mans Ultimate, plus ATS and ETS2 with the -openxr launch option. Assetto Corsa and AMS2 work through OpenComposite. The helmet, Pop and the FPS panel work in Direct3D 11 and 12 games.</p>
+<p>The team has tested 1.4.3 in iRacing, Le Mans Ultimate, F1 25, Assetto Corsa EVO, Assetto Corsa, Automobilista 2 and American and Euro Truck Simulator 2, so compatibility is no longer a concern. Native OpenXR sims work as they are; ATS and ETS2 need the -openxr launch option, and Assetto Corsa and AMS2 run through OpenComposite. The crop, helmets, Pop and the FPS panel work in Direct3D 11 and 12 games. Creator Mode works in Direct3D 11 games for now.</p>
 </div>
 
-<h2>What's next</h2>
-<p>NextLevelXR 1.4.1 is with the team for testing now: real headsets, real sims, before-and-after captures. When it's ready this post will get the download, the full user guide, a video and the numbers from those captures.</p>
+<div class="box">
+<h3>Fully digitally signed with Certum</h3>
+<p>Every file is signed with a Certum code-signing certificate and timestamped: the installer, the uninstaller, the NextLevelXR layer, the Control app, ShenronZero's helmet module and the helpers. Windows shows the publisher as Gary Bowman, and right-click &gt; Properties &gt; Digital Signatures lets anyone check. Any change to a signed file breaks its signature, so a tampered copy is easy to spot.</p>
+</div>
+
+<h2>Get it</h2>
+<p>The signed NextLevelXR 1.4.3 installer and its 23-page PDF user guide come to the #downloads channel on the Next Level Sim Gaming Discord, where the developers answer questions in #support. Installing over 1.4.2 keeps your settings.</p>
 <div class="btn-row">
-<a class="btn" href="https://discord.gg/gw6xXkWtKa">Join the Discord for updates</a>
+<a class="btn" href="https://discord.gg/gw6xXkWtKa">Join the Discord</a>
 <a class="btn ghost" href="https://www.youtube.com/@nextlevelsimgaming">Watch on YouTube</a>
 </div>
 
 <p class="aside">Looking for the Elhydro Custom FOV &amp; Helmet Mod? It has <a href="/elhydro-custom-fov-helmet-mod.html">its own page</a>. NextLevelXR is a separate, standalone mod.</p>
 
-<p class="disclosure">NextLevelXR and NextLevelXR Control. Copyright © 2026 Next Level Sim Gaming, Elhydro, ShenronZero and pspsps195. All rights reserved. Developed by Next Level Sim Gaming and Elhydro; FOV crop, supersampling and helmet design in collaboration with Elhydro. Contributors: ShenronZero (development support and testing) and pspsps195 (helmets, testing and release checks). NextLevelXR is free software, provided "as is", without warranty of any kind. Only use one FOV-cropping tool at a time, and check your sim's rules on VR tools before racing online.</p>
+<p class="disclosure">NextLevelXR and NextLevelXR Control. Copyright © 2026 Next Level Sim Gaming, Elhydro, ShenronZero and pspsps195. All rights reserved. Developed by Next Level Sim Gaming and Elhydro; FOV crop, supersampling and helmet design in collaboration with Elhydro. Helmet library by ShenronZero. Contributors: ShenronZero (development support and testing) and pspsps195 (helmets, testing and release checks). Creator Mode works with Jabbah's OpenXR Mirror Capture OBS plugin. NextLevelXR is free software, provided "as is", without warranty of any kind. Only use one FOV-cropping tool at a time, and check your sim's rules on VR tools before racing online.</p>
 </main>
 
 <footer>
