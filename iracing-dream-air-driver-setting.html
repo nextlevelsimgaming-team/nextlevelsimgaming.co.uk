@@ -167,6 +167,12 @@
   .nav-links a:hover{color:var(--amber);}
   .nav-right{display:flex;align-items:center;gap:1.25rem;}
   @media (max-width:820px){ .nav-links{display:none;} }
+  /* keep the header inside the screen: links scroll, Subscribe stays visible */
+  .nav-links{min-width:0;flex:1 1 auto;overflow-x:auto;scrollbar-width:none;gap:1.4rem;}
+  .nav-links::-webkit-scrollbar{display:none;}
+  .nav-links li{white-space:nowrap;}
+  .nav-right{flex:none;}
+  @media (max-width:480px){ .brand-word{font-size:.88rem;} nav .wrap{gap:.75rem;} .nav-right .btn{padding:.45rem .75rem;} }
   .btn{
     display:inline-flex;
     align-items:center;
@@ -364,6 +370,17 @@
       </figcaption>
     </figure>
 
+    <div class="panel guide-cta" style="margin-top:1.6rem;">
+      <div>
+        <h3>The headset in this guide: Pimax Dream Air</h3>
+        <p>This setting is tested on the Pimax Dream Air. Shop through these links and the NLSimgaming ambassador discount is applied at checkout, no code to copy.</p>
+      </div>
+      <div style="display:flex;gap:.6rem;flex-wrap:wrap;">
+        <a class="btn btn-primary" href="https://pimax.com/discount/nlsimgaming?redirect=%2Fproducts%2Fpimax-dream-air/?ref=nlsimgaming" target="_blank" rel="sponsored noopener" data-partner="pimax" data-slot="iracing-top-dream-air">Dream Air &rarr;</a>
+        <a class="btn" href="https://pimax.com/discount/nlsimgaming?redirect=%2Fproducts%2Fpimax-dream-air-se/?ref=nlsimgaming" target="_blank" rel="sponsored noopener" data-partner="pimax" data-slot="iracing-top-dream-air-se" style="border:1px solid var(--amber);color:var(--amber);">Dream Air SE &rarr;</a>
+      </div>
+    </div>
+
     <div class="guide-body" style="margin-top:2.4rem;">
       <h2>What this covers</h2>
       <ul class="takeaways">
@@ -396,8 +413,9 @@
         <h3>Testing this on a Dream Air?</h3>
         <p>Approved Pimax Sim Racing Ambassador — code NLSimgaming for a discount if you're upgrading.</p>
       </div>
-      <a class="btn btn-primary" href="https://pimax.com/products/pimax-dream-air/?ref=nlsimgaming" target="_blank" rel="noopener">Shop Pimax →</a>
+      <a class="btn btn-primary" href="https://pimax.com/discount/nlsimgaming?redirect=%2Fproducts%2Fpimax-dream-air/?ref=nlsimgaming" target="_blank" rel="sponsored noopener" data-partner="pimax" data-slot="iracing-bottom">Shop Pimax, discount applied →</a>
     </div>
+    <p style="font-size:.8rem;color:var(--paper-dim);margin:1.2rem 0 0;">Affiliate disclosure: Next Level Sim Gaming is an approved Pimax Sim Racing Ambassador and earns a commission on purchases made through the Pimax links on this page, at no extra cost to you.</p>
   </div>
 </section>
 
@@ -429,5 +447,34 @@
   </div>
 </footer>
 
+
+<script>
+/* Outbound affiliate click tracking — see codes.html for notes. */
+(function () {
+function send(partner, slot) {
+var payload = { partner: partner, slot: slot || 'unspecified', page: location.pathname };
+if (typeof window.gtag === 'function') {
+window.gtag('event', 'affiliate_click', payload);
+} else if (Array.isArray(window.dataLayer)) {
+payload.event = 'affiliate_click';
+window.dataLayer.push(payload);
+}
+}
+function partnerFrom(el) {
+if (el.getAttribute('data-partner')) return el.getAttribute('data-partner');
+var href = el.getAttribute('href') || '';
+try { return new URL(href, location.origin).hostname.replace(/^www\./, ''); }
+catch (e) { return 'unknown'; }
+}
+document.addEventListener('click', function (e) {
+var el = e.target.closest('a[href]');
+if (!el) return;
+var href = el.getAttribute('href') || '';
+if (!/^https?:/i.test(href)) return;
+try { if (new URL(href).hostname === location.hostname) return; } catch (err) { return; }
+send(partnerFrom(el), el.getAttribute('data-slot'));
+});
+})();
+</script>
 </body>
 </html>
