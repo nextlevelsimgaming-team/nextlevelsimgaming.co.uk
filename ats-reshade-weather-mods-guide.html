@@ -167,6 +167,12 @@
   .nav-links a:hover{color:var(--amber);}
   .nav-right{display:flex;align-items:center;gap:1.25rem;}
   @media (max-width:820px){ .nav-links{display:none;} }
+  /* keep the header inside the screen: links scroll, Subscribe stays visible */
+  .nav-links{min-width:0;flex:1 1 auto;overflow-x:auto;scrollbar-width:none;gap:1.4rem;}
+  .nav-links::-webkit-scrollbar{display:none;}
+  .nav-links li{white-space:nowrap;}
+  .nav-right{flex:none;}
+  @media (max-width:480px){ .brand-word{font-size:.88rem;} nav .wrap{gap:.75rem;} .nav-right .btn{padding:.45rem .75rem;} }
   .btn{
     display:inline-flex;
     align-items:center;
