@@ -113,6 +113,10 @@ li{margin-bottom:.5rem}
 
 .box{background:var(--ink-2);border:1px solid var(--line);border-left:3px solid var(--amber);border-radius:3px;padding:1.35rem 1.35rem .5rem;margin:1.75rem 0}
 .box h3{margin-top:0;color:var(--paper)}
+.box.signed{display:flex;gap:1.25rem;align-items:center;padding-bottom:1.35rem}
+.box.signed img{flex:0 0 7.5rem;width:7.5rem;height:auto;border-radius:3px;background:#fff;padding:.35rem;box-sizing:border-box}
+.box.signed p:last-child{margin-bottom:0}
+@media(max-width:36rem){.box.signed{flex-direction:column;align-items:flex-start}.box.signed img{flex-basis:auto;width:6.5rem}}
 .aside{border-left:2px solid var(--line);padding-left:1rem;color:var(--paper-dim);font-size:.95rem;margin:1.5rem 0}
 
 .steps{counter-reset:s;list-style:none;padding:0}
@@ -263,9 +267,12 @@ table.spec td{color:var(--paper-dim)}
 <p>NextLevelFPS is the same panel that lives inside <a href="/nextlevelxr-mod.html">NextLevelXR</a> (coming soon), as its own standalone mod for people who don&rsquo;t need the FOV crop and supersampling. When NextLevelXR arrives, they install side by side without conflict &mdash; separate layers, separate settings. Just turn the FPS panel on in only one of the two apps, or you&rsquo;ll see two panels.</p>
 </div>
 
-<div class="box">
+<div class="box signed">
+<img src="/certum-signed.png" width="359" height="375" alt="Certum code signing: a signed document on a monitor with the Certum shield on a phone" loading="lazy" decoding="async">
+<div>
 <h3>Fully digitally signed with Certum</h3>
 <p>The installer, the uninstaller, the NextLevelFPS layer and the Control app are all signed with a Certum code-signing certificate and timestamped. Windows shows the verified publisher, and right-click &gt; Properties &gt; Digital Signatures lets anyone check. Any change to a signed file breaks its signature, so a tampered copy is easy to spot &mdash; only trust builds from our own channels.</p>
+</div>
 </div>
 
 <h2>Get it</h2>
