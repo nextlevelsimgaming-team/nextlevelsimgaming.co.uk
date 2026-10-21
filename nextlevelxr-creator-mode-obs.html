@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<script defer src="/cookie-consent.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NextLevelXR Creator Mode: A Live, Lossless VR Feed Straight Into OBS | Next Level Sim Gaming</title>
+<meta name="description" content="NextLevelXR Creator Mode feeds OBS exactly what you see in the VR headset, with the full helmet and live performance stats, at the click of a button. No mirror window, no recording to convert, no compression before OBS.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://nextlevelsimgaming.co.uk/nextlevelxr-creator-mode-obs.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Next Level Sim Gaming">
+<meta property="og:title" content="Creator Mode: a live, lossless VR feed straight into OBS">
+<meta property="og:description" content="Exactly what you see in the headset, full helmet and live stats included, fed directly into OBS at the click of a button. Built into NextLevelXR.">
+<meta property="og:image" content="https://nextlevelsimgaming.co.uk/nextlevelxr-creator-mode-full-helmet-view.jpg">
+<meta property="og:url" content="https://nextlevelsimgaming.co.uk/nextlevelxr-creator-mode-obs.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@nextlevelsim">
+<meta name="twitter:title" content="Creator Mode: a live, lossless VR feed straight into OBS">
+<meta name="twitter:description" content="Exactly what you see in the headset, full helmet and live stats included, fed directly into OBS at the click of a button. Built into NextLevelXR.">
+<meta name="twitter:image" content="https://nextlevelsimgaming.co.uk/nextlevelxr-creator-mode-full-helmet-view.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://nextlevelsimgaming.co.uk/"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://nextlevelsimgaming.co.uk/blog.html"},
+    {"@type": "ListItem", "position": 3, "name": "Creator Mode", "item": "https://nextlevelsimgaming.co.uk/nextlevelxr-creator-mode-obs.html"}
+   ]
+  },
+  {
+   "@type": "BlogPosting",
+   "headline": "Creator Mode: a live, lossless VR feed straight into OBS",
+   "description": "NextLevelXR Creator Mode feeds OBS exactly what you see in the VR headset, with the full helmet and live performance stats, at the click of a button.",
+   "url": "https://nextlevelsimgaming.co.uk/nextlevelxr-creator-mode-obs.html",
+   "datePublished": "2026-10-21",
+   "dateModified": "2026-10-21",
+   "inLanguage": "en-GB",
+   "image": "https://nextlevelsimgaming.co.uk/nextlevelxr-creator-mode-full-helmet-view.jpg",
+   "author": {"@type": "Organization", "name": "Next Level Sim Gaming", "url": "https://nextlevelsimgaming.co.uk/"},
+   "publisher": {"@type": "Organization", "name": "Next Level Sim Gaming", "url": "https://nextlevelsimgaming.co.uk/"}
+  }
+ ]
+}
+</script>
+<style>
+:root{
+--ink:#12151C;--ink-2:#1A1E27;--ink-3:#232833;
+--amber:#F2A03D;--crimson:#D94A3D;
+--paper:#E8EAEE;--paper-dim:#9BA3B2;--line:#2C3240;
+--discord:#5865F2;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ink);color:var(--paper);font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:17px;line-height:1.65}
+a{color:var(--amber)}
+.wrap{max-width:44rem;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:"Saira Condensed",sans-serif;font-weight:700;line-height:1.1;margin:0 0 .5rem}
+h1{font-size:clamp(2rem,7vw,3.1rem);margin-top:1.25rem}
+h2{font-size:clamp(1.5rem,4.5vw,2.1rem);margin-top:3rem;padding-top:1.25rem;border-top:1px solid var(--line)}
+h3{font-size:1.15rem;margin-top:1.5rem;color:var(--amber)}
+p{margin:0 0 1.1rem}
+ul,ol{padding-left:1.15rem}
+li{margin-bottom:.5rem}
+
+.bar{border-bottom:1px solid var(--line);background:var(--ink-2)}
+.bar .wrap{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;align-items:center;padding-top:.85rem;padding-bottom:.85rem}
+.brand{font-family:"Saira Condensed",sans-serif;font-weight:700;font-size:1.15rem;color:var(--paper);text-decoration:none}
+.bar nav{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:"IBM Plex Mono",monospace;font-size:.78rem}
+.bar nav a{color:var(--paper-dim);text-decoration:none}
+.bar nav a:hover,.bar nav a:focus{color:var(--amber)}
+.bar nav a[aria-current]{color:var(--amber)}
+
+.crumb{font-family:"IBM Plex Mono",monospace;font-size:.75rem;color:var(--paper-dim);margin:1.75rem 0 0}
+.crumb a{color:var(--paper-dim)}
+.badge{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.06em;color:var(--ink);background:var(--amber);padding:.28rem .6rem;border-radius:2px;margin-top:1.5rem}
+.updated{font-family:"IBM Plex Mono",monospace;font-size:.75rem;color:var(--paper-dim);margin:.25rem 0 1rem}
+.standfirst{font-size:1.15rem;color:var(--paper-dim);margin-bottom:2rem}
+
+/* offer block */
+.offer{border:1px solid var(--crimson);border-radius:3px;background:linear-gradient(180deg,rgba(10,8,8,.72),rgba(10,8,8,.62)),url("/pimax-logo-backdrop.jpg") center/cover no-repeat;padding:1.5rem;margin:0 0 2.5rem}
+.offer .kicker{font-family:"IBM Plex Mono",monospace;font-size:.74rem;letter-spacing:.06em;color:var(--crimson);margin:0 0 .3rem;text-shadow:0 1px 3px rgba(0,0,0,.8)}
+.offer h2{margin:0 0 .6rem;border:0;padding:0;font-size:clamp(1.7rem,5vw,2.3rem);text-shadow:0 1px 3px rgba(0,0,0,.8)}
+.offer > p{font-size:1rem;margin-bottom:1.25rem;text-shadow:0 1px 3px rgba(0,0,0,.8)}
+.deals{display:grid;grid-template-columns:1fr;gap:1rem;margin-bottom:1.25rem}
+@media(min-width:42rem){.deals{grid-template-columns:1fr 1fr}}
+.deal{background:var(--ink-2);border:1px solid var(--line);border-radius:3px;padding:1.1rem;display:flex;flex-direction:column}
+.deal h3{margin:0 0 .4rem;color:var(--paper);font-size:1.2rem}
+.deal ul{margin:0 0 1rem;padding-left:1.05rem;font-size:.9rem;color:var(--paper-dim)}
+.deal ul li{margin-bottom:.3rem}
+.deal .btn{margin-top:auto}
+.deadline{font-family:"IBM Plex Mono",monospace;font-size:.78rem;color:var(--crimson);letter-spacing:.03em;margin:0}
+
+/* Discord offers box */
+.stack{background:var(--ink-2);border:1px solid var(--discord);border-left:3px solid var(--discord);border-radius:3px;padding:1.25rem 1.25rem .4rem;margin:0}
+.stack .kicker{font-family:"IBM Plex Mono",monospace;font-size:.74rem;letter-spacing:.06em;color:#9aa2ff;margin:0 0 .3rem}
+.stack h3{margin:0 0 .5rem;color:var(--paper);font-size:1.35rem}
+.stack .btn{background:var(--discord);color:#fff;margin-bottom:1rem}
+.stack .btn:hover,.stack .btn:focus{background:#6f7af5}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:"Saira Condensed",sans-serif;font-weight:700;font-size:1.05rem;padding:.65rem 1.25rem;border-radius:3px;text-decoration:none;border:0;cursor:pointer;background:var(--amber);color:var(--ink);align-self:flex-start}
+.btn:hover,.btn:focus{background:#ffb457}
+.btn.ghost{background:transparent;color:var(--amber);border:1px solid var(--amber);font-family:"IBM Plex Mono",monospace;font-size:.83rem;font-weight:500}
+.btn.ghost:hover,.btn.ghost:focus{background:rgba(242,160,61,.12)}
+.btn-row{display:flex;flex-wrap:wrap;gap:.75rem}
+:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+
+.box{background:var(--ink-2);border:1px solid var(--line);border-left:3px solid var(--amber);border-radius:3px;padding:1.35rem 1.35rem .5rem;margin:1.75rem 0}
+.box h3{margin-top:0;color:var(--paper)}
+.aside{border-left:2px solid var(--line);padding-left:1rem;color:var(--paper-dim);font-size:.95rem;margin:1.5rem 0}
+
+.steps{counter-reset:s;list-style:none;padding:0}
+.steps li{counter-increment:s;position:relative;padding-left:2.4rem;margin-bottom:.9rem}
+.steps li::before{content:counter(s);position:absolute;left:0;top:.1rem;width:1.7rem;height:1.7rem;border-radius:50%;background:var(--amber);color:var(--ink);font-family:"Saira Condensed",sans-serif;font-weight:700;display:flex;align-items:center;justify-content:center}
+
+.faq details{border-bottom:1px solid var(--line);padding:.8rem 0}
+.faq summary{cursor:pointer;font-weight:600;list-style-position:outside}
+.faq details p{margin:.6rem 0 0;color:var(--paper-dim)}
+
+.guides{list-style:none;padding:0;margin:1rem 0 0}
+.guides li{margin-bottom:.7rem}
+
+.disclosure{font-size:.8rem;color:var(--paper-dim);margin:2rem 0 0;padding-top:1.25rem;border-top:1px solid var(--line)}
+footer{margin-top:3.5rem;padding:2rem 0;border-top:1px solid var(--line);background:var(--ink-2);font-size:.85rem;color:var(--paper-dim)}
+footer .wrap p{margin:0 0 .5rem}
+footer a{color:var(--paper-dim)}
+
+.ratio{position:relative;aspect-ratio:16/9;background:#000;border:1px solid var(--line);border-radius:3px;overflow:hidden;margin:1rem 0 .4rem}
+.ratio iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.cap{font-family:"IBM Plex Mono",monospace;font-size:.75rem;color:var(--paper-dim);margin:0 0 1.5rem}
+.others{display:flex;flex-wrap:wrap;gap:.6rem}
+
+/* crystal pro additions */
+.fig{margin:1.5rem 0}
+.fig img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:3px;background:var(--ink-2)}
+.fig figcaption{font-family:"IBM Plex Mono",monospace;font-size:.75rem;color:var(--paper-dim);margin-top:.4rem}
+.tablewrap{overflow-x:auto;margin:1.25rem 0}
+table.spec{width:100%;border-collapse:collapse;font-size:.92rem;min-width:30rem}
+table.spec th,table.spec td{text-align:left;padding:.6rem .7rem;border-bottom:1px solid var(--line);vertical-align:top}
+table.spec th{font-family:"IBM Plex Mono",monospace;font-size:.74rem;font-weight:500;letter-spacing:.05em;color:var(--amber);background:var(--ink-2)}
+table.spec td:first-child{color:var(--paper);font-weight:600;white-space:nowrap}
+table.spec td{color:var(--paper-dim)}
+.hero{margin:0 0 1.75rem}
+.hero img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:3px}
+.newbadge{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.06em;color:#fff;background:var(--crimson);padding:.28rem .6rem;border-radius:2px;margin:1.5rem .5rem 0 0}
+.price{font-family:"Saira Condensed",sans-serif;font-weight:700;font-size:2rem;color:var(--amber);line-height:1;margin:0 0 .5rem}
+.cta{background:var(--ink-2);border:1px solid var(--amber);border-radius:3px;padding:1.4rem;margin:2rem 0;text-align:left}
+.cta h3{margin-top:0;color:var(--paper);font-size:1.4rem}
+.cta p{color:var(--paper-dim);font-size:.95rem}
+.post-list{list-style:none;padding:0;margin:1.5rem 0}
+.post-list li{border:1px solid var(--line);border-radius:3px;background:var(--ink-2);margin-bottom:1.25rem;overflow:hidden}
+.post-list img{display:block;width:100%;height:auto}
+.post-list .pbody{padding:1.1rem 1.25rem}
+.post-list h2{margin:.2rem 0 .5rem;padding:0;border:0;font-size:1.6rem}
+.post-list h2 a{color:var(--paper);text-decoration:none}
+.post-list h2 a:hover{color:var(--amber)}
+.post-list .meta{font-family:"IBM Plex Mono",monospace;font-size:.75rem;color:var(--paper-dim);margin:0}
+.post-list p{margin:.5rem 0 0;color:var(--paper-dim);font-size:.95rem}
+.note{border-left:3px solid var(--crimson);background:var(--ink-2);padding:1rem 1.2rem;margin:1.5rem 0;font-size:.95rem;border-radius:0 3px 3px 0}
+.note strong{color:var(--paper)}
+.fig.narrow{max-width:25rem}
+.fig.mid{max-width:34rem}
+
+/* tidy header (Oct 2026): brand and menu on one line, Discord as a button */
+.bar .wrap{max-width:72rem;flex-wrap:nowrap;justify-content:space-between;gap:1.75rem;padding-top:.7rem;padding-bottom:.7rem}
+.brand{white-space:nowrap;flex:none}
+.bar nav{flex-wrap:nowrap;align-items:center;gap:1.35rem;white-space:nowrap;overflow-x:auto;scrollbar-width:none}
+.bar nav::-webkit-scrollbar{display:none}
+.bar nav a{padding:.35rem 0}
+.bar nav a[aria-current]{color:var(--amber);box-shadow:inset 0 -2px 0 var(--amber)}
+.bar nav a.pill{background:#5865F2;color:#fff;padding:.32rem .75rem;border-radius:3px}
+.bar nav a.pill:hover,.bar nav a.pill:focus{background:#6f7af5;color:#fff}
+.bar nav a.pill.yt{background:#D94A3D}
+.bar nav a.pill.yt:hover,.bar nav a.pill.yt:focus{background:#e45d51}
+@media(max-width:62rem){
+.bar .wrap{flex-wrap:wrap;gap:.35rem 1rem}
+.bar nav{width:100%;padding-bottom:.15rem;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+}
+.crumb{margin-top:1.5rem}
+.crumb + .badge,.crumb + .newbadge{margin-top:.85rem}
+</style>
+</head>
+<body>
+
+<div class="bar">
+<div class="wrap">
+<a class="brand" href="/index.html">Next Level Sim Gaming</a>
+<nav>
+<a href="/index.html#videos">Latest</a>
+<a href="/pimax.html">Pimax</a>
+<a href="/pimax-crystal-pro.html">Crystal Pro</a>
+<a href="/blog.html">Blog</a>
+<a href="/ats-ets2.html">ATS / ETS2</a>
+<a href="/pimax-setup-and-fix-guide.html">Fix Guide</a>
+<a href="/tobii.html">Tobii</a>
+<a href="/codes.html">Discount codes</a>
+<a href="/elhydro-custom-fov-helmet-mod.html">FOV Mod</a>
+<a class="pill" href="https://discord.gg/gw6xXkWtKa">Discord</a>
+</nav>
+</div>
+</div>
+
+<main class="wrap">
+<p class="crumb"><a href="/index.html">Home</a> / <a href="/blog.html">Blog</a> / Creator Mode</p>
+<p class="newbadge">FEATURE</p><p class="badge">NextLevelXR &middot; Creator Mode</p>
+<h1>Creator Mode: a live, lossless VR feed straight into OBS</h1>
+<p class="updated">21 October 2026 &middot; Next Level Sim Gaming</p>
+<p class="standfirst">Ask any VR content creator what the hardest part of the job is, and it isn&rsquo;t the driving. It&rsquo;s getting what you actually see in the headset onto the screen for everyone else. Creator Mode in NextLevelXR solves that at the click of a button: the exact headset view, full helmet and live performance stats included, fed directly into OBS.</p>
+
+<figure class="fig hero">
+<img src="/nextlevelxr-creator-mode-full-helmet-view.jpg" width="1600" height="730" alt="Creator Mode output in OBS: a cockpit view through a full racing helmet visor, following a historic F1 car, with the performance panel reading 90 FPS at the top of the visor" fetchpriority="high" decoding="async">
+<figcaption>Straight out of Creator Mode: the whole helmet, centred, with the performance panel sitting in the visor. This is the frame OBS receives, not a phone pointed at a lens.</figcaption>
+</figure>
+
+<div class="box">
+<h3>Creator Mode in 20 seconds</h3>
+<ul>
+<li><strong>What you see is what they see:</strong> the view from the middle of your head, both eyes&rsquo; worth of helmet, not a lopsided single-eye crop.</li>
+<li><strong>A direct feed, not a file:</strong> frames go live into OBS as the game renders them. Nothing to record, convert or import afterwards.</li>
+<li><strong>Lossless into OBS:</strong> no compression step before OBS. The only encode is the one you choose for your stream or recording.</li>
+<li><strong>Stats on screen:</strong> the NextLevelXR performance panel rides along in the feed, so viewers see the frame rate and frame times for themselves.</li>
+<li><strong>One tick to turn on:</strong> off by default, and no mirror window cluttering your desktop.</li>
+</ul>
+</div>
+
+<h2>The problem every VR creator knows</h2>
+<p>Capturing VR has always meant compromise. Grab the desktop mirror and you get one eye&rsquo;s view, cropped and off-centre, with the helmet chopped in half. Use a headset&rsquo;s built-in recorder and you get a separate video file to drag into your editor later, which is no use at all if you&rsquo;re streaming live. And if you want to show your performance numbers, that&rsquo;s another tool, another overlay, another thing to line up in post.</p>
+<p>For a sim racing channel that lives and dies on showing people what a headset really looks like, that gap has been a constant headache. So we fixed it.</p>
+
+<h2>How Creator Mode works</h2>
+<p>NextLevelXR already sits between the game and the headset as an OpenXR layer. That position is what makes Creator Mode possible: it can see every finished frame the moment it&rsquo;s rendered. When Creator Mode is ticked, NextLevelXR draws an extra flat, centred 16:9 picture from the middle of your head, with the full helmet and the performance panel composited in exactly as you see them, and hands that picture to OBS.</p>
+<p>Because OBS is handed the image itself rather than a recording, there&rsquo;s no intermediate compression and no quality lost on the way in. You set the bitrate and the encoder in OBS, the same as for any other source, and everything else in your scene &mdash; webcam, alerts, chat, lower thirds &mdash; works live around it.</p>
+
+<figure class="fig mid">
+<img src="/nextlevelxr-creator-mode-overlay-closeup.jpg" width="1400" height="887" alt="Close-up of the performance panel in the Creator Mode feed: 90 FPS in green, CPU 6.4 ms, GPU 8.8 ms, and a status line showing 90 Hz, 3584 by 1998 and DX11" loading="lazy" decoding="async">
+<figcaption>The panel in the feed, up close: 90 FPS, CPU 6.4 ms, GPU 8.8 ms, at 90 Hz and 3584&times;1998 in a DX11 title.</figcaption>
+</figure>
+
+<h3>Proof in the numbers</h3>
+<p>Look at what the screenshot above is telling you. At 90 Hz every frame has 11.1 ms to be ready. The GPU is finishing in 8.8 ms and the CPU in 6.4 ms, so the headset is holding a locked 90 FPS with roughly 20% of the GPU budget still in reserve. That&rsquo;s with Creator Mode running and feeding OBS. Showing viewers that kind of data live, in the shot, is far more convincing than quoting numbers in a voiceover.</p>
+
+<h2>Pimax Play recording vs Creator Mode</h2>
+<p>Pimax Play&rsquo;s built-in recorder is handy for a quick clip, and it&rsquo;s worth knowing the difference. It writes its own MKV file, which you then bring into your editor once you&rsquo;ve finished. Creator Mode works the other way round: a live feed straight into OBS while you drive.</p>
+<div class="tablewrap">
+<table class="spec">
+<thead><tr><th></th><th>Pimax Play recording</th><th>NextLevelXR Creator Mode</th></tr></thead>
+<tbody>
+<tr><td>Output</td><td>Its own MKV file</td><td>A live source inside OBS</td></tr>
+<tr><td>Live streaming</td><td>Not the job it&rsquo;s built for</td><td>Yes, it&rsquo;s already in your OBS scene</td></tr>
+<tr><td>Compression</td><td>Encoded into the file</td><td>None before OBS; you choose the encode</td></tr>
+<tr><td>Helmet and stats</td><td>&mdash;</td><td>Full helmet and performance panel in the shot</td></tr>
+<tr><td>Workflow</td><td>Record, then import</td><td>Tick the box, go live or hit record in OBS</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Far more than sim racing</h2>
+<p>We built Creator Mode for our own racing videos, but nothing about it is specific to cars. Anyone who wants to show a VR audience exactly what they&rsquo;re seeing benefits:</p>
+<ul>
+<li><strong>Flight sim creators</strong> can stream a cockpit view that matches the headset, with frame times on screen for the inevitable &ldquo;what does it run like?&rdquo; question.</li>
+<li><strong>Space sim pilots</strong> get a clean, centred feed for long streams, without a mirror window fighting for space on the desktop.</li>
+<li><strong>Reviewers and hardware testers</strong> can capture side-by-side settings comparisons with the performance data baked into every frame.</li>
+<li><strong>Coaches and league broadcasters</strong> can put a driver&rsquo;s true in-headset view on a broadcast live.</li>
+</ul>
+
+<div class="note">
+<p style="margin:0"><strong>Today&rsquo;s support:</strong> Creator Mode currently works in Direct3D 11 titles and connects to OBS through Jabbah&rsquo;s OpenXR Mirror Capture plugin. Our own end-to-end OBS plugin, NextLevelXR Capture, is in development for 1.4.4, with Jabbah&rsquo;s plugin kept as a fallback. Direct3D 12 support for Creator Mode is on the list.</p>
+</div>
+
+<h2>Get it</h2>
+<p>Creator Mode is part of <a href="/nextlevelxr-mod.html">NextLevelXR</a>, our free, fully signed OpenXR mod. The installer and user guide are in the members download section on the Next Level Sim Gaming Discord, where the team answers questions in #support.</p>
+<div class="btn-row">
+<a class="btn" href="https://discord.gg/gw6xXkWtKa">Join the Discord</a>
+<a class="btn ghost" href="/nextlevelxr-mod.html">Read about NextLevelXR</a>
+</div>
+
+<div class="cta">
+<h3>Pair it with a Pimax</h3>
+<p>Creator Mode was built and tested on the Pimax Dream Air, Dream Air SE and Crystal Super. The NLSimgaming ambassador discount is applied at checkout through these links.</p>
+<div class="btn-row">
+<a class="btn" href="https://pimax.com/discount/nlsimgaming?redirect=%2Fproducts%2Fpimax-dream-air/?ref=nlsimgaming" rel="sponsored noopener" data-partner="pimax" data-slot="creator-mode-end-dream-air">Dream Air &rarr;</a>
+<a class="btn ghost" href="https://pimax.com/discount/nlsimgaming?redirect=%2Fproducts%2Fpimax-dream-air-se/?ref=nlsimgaming" rel="sponsored noopener" data-partner="pimax" data-slot="creator-mode-end-dream-air-se">Dream Air SE &rarr;</a>
+<a class="btn ghost" href="https://pimax.com/discount/nlsimgaming?redirect=%2Fproducts%2Fpimax-crystal-super/?ref=nlsimgaming" rel="sponsored noopener" data-partner="pimax" data-slot="creator-mode-end-crystal-super">Crystal Super &rarr;</a>
+</div>
+</div>
+
+<p class="disclosure">Affiliate disclosure: Next Level Sim Gaming is an approved Pimax Sim Racing Ambassador and earns a commission on purchases made through the Pimax links on this page, at no extra cost to you. NextLevelXR itself is free.</p>
+<p class="disclosure" style="border-top:0;margin-top:.5rem;padding-top:0">NextLevelXR and NextLevelXR Control. Copyright &copy; 2026 Next Level Sim Gaming, Elhydro, ShenronZero and pspsps195. All rights reserved. Creator Mode works with Jabbah&rsquo;s OpenXR Mirror Capture OBS plugin. Pimax and Pimax Play are trademarks of Pimax. OBS Studio is a trademark of the OBS Project. Check your sim&rsquo;s rules on VR tools before racing online.</p>
+</main>
+
+<footer>
+<div class="wrap">
+<p><a href="https://www.youtube.com/@nextlevelsimgaming">YouTube</a> · <a href="https://x.com/nextlevelsim">X</a> · <a href="https://discord.gg/gw6xXkWtKa">Discord</a> · <a href="/pimax-crystal-pro.html">Crystal Pro</a> · <a href="/blog.html">Blog</a> · <a href="/codes.html">Discount codes</a></p>
+<p>© 2026 Next Level Sim Gaming. Pimax Sim Racing Ambassador · Tobii Ambassador</p>
+</div>
+</footer>
+
+<script>
+/* Outbound affiliate click tracking — see codes.html for notes. */
+(function () {
+function send(partner, slot) {
+var payload = { partner: partner, slot: slot || 'unspecified', page: location.pathname };
+if (typeof window.gtag === 'function') {
+window.gtag('event', 'affiliate_click', payload);
+} else if (Array.isArray(window.dataLayer)) {
+payload.event = 'affiliate_click';
+window.dataLayer.push(payload);
+}
+}
+function partnerFrom(el) {
+if (el.getAttribute('data-partner')) return el.getAttribute('data-partner');
+var href = el.getAttribute('href') || '';
+try { return new URL(href, location.origin).hostname.replace(/^www\./, ''); }
+catch (e) { return 'unknown'; }
+}
+document.addEventListener('click', function (e) {
+var el = e.target.closest('a[href]');
+if (!el) return;
+var href = el.getAttribute('href') || '';
+if (!/^https?:/i.test(href)) return;
+try { if (new URL(href).hostname === location.hostname) return; } catch (err) { return; }
+send(partnerFrom(el), el.getAttribute('data-slot'));
+});
+})();
+</script>
+</body>
+</html>
